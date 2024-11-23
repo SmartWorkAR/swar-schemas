@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/v1.2.1/process.json",
+  "type": "object",
+  "description": "SWAR Version 1.2 process definition",
+  "required": [
+    "name",
+    "activities"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the process (a short description)"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed description of the process"
+    },
+    "title": {
+      "type": "string"
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "showQr": {
+          "type": "boolean"
+        },
+        "canCreateOnDevice": {
+          "type": "boolean"
+        },
+        "canUploadBeforeFinish": {
+          "type": "boolean"
+        }
+      }
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "instructions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "implementation": {
+                  "type": "object",
+                  "oneOf": [
+                    {
+                      "$ref": "form-implementation.json"
+                    },
+                    {
+                      "$ref": "photo-implementation.json"
+                    },
+                    {
+                      "$ref": "form2-implementation.json"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "description"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "description",
+          "instructions"
+        ]
+      }
+    }
+  }
+}
