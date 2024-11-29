@@ -1,13 +1,16 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://example.com/schemas/v1.2.1/process.json",
+  "$id": "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json",
   "type": "object",
+  "title": "SWAR Process Definition",
   "description": "SWAR Version 1.2 process definition",
   "required": [
     "name",
     "activities"
   ],
+  "additionalProperties": false,
   "properties": {
+
     "name": {
       "type": "string",
       "description": "The name of the process (a short description)"
@@ -17,7 +20,8 @@
       "description": "A detailed description of the process"
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "description": "A one line description of the process (subject)"
     },
     "roles": {
       "type": "array",
@@ -27,19 +31,11 @@
     },
     "options": {
       "type": "object",
-      "properties": {
-        "showQr": {
-          "type": "boolean"
-        },
-        "canCreateOnDevice": {
-          "type": "boolean"
-        },
-        "canUploadBeforeFinish": {
-          "type": "boolean"
-        }
-      }
+      "description": "Additional ad hoc properties",
+      "additionalProperties": true
     },
     "activities": {
+      "description": "The activities of the process",
       "type": "array",
       "items": {
         "type": "object",
@@ -67,20 +63,46 @@
                     "type": "string"
                   }
                 },
+                "photos": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "label": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["id", "label"]
+                  }
+                },
+                "photos-faked": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "label": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["id", "label"]
+                  }
+                },
                 "implementation": {
-                  "type": "object",
-                  "oneOf": [
-                    {
-                      "$ref": "form-implementation.json"
-                    },
-                    {
-                      "$ref": "photo-implementation.json"
-                    },
-                    {
-                      "$ref": "form2-implementation.json"
-                    }
-                  ]
+                  "type": "string"
                 }
+              },
+              "oneOf": [
+                { "required": ["photos"] },
+                { "required": ["photos-faked"] }
+              ],
+              "not": {
+                "required": ["a", "b"]
               },
               "required": [
                 "id",
