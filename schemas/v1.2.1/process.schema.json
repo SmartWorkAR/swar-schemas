@@ -28,6 +28,13 @@
         "type": "string"
       }
     },
+    "primaryKey": {
+      "type": "array",
+      "description": "Define with input parameter fields are considered a primary key of a process instance.",
+      "items": {
+        "type": "string"
+      }
+    },
     "options": {
       "type": "object",
       "description": "Additional ad hoc properties",
