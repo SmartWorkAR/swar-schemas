@@ -8,6 +8,7 @@ on:
             - schemas/v1.2.1/** # Trigger only when the schemas directory is updated
             - package.json
             - package-lock.json
+            - README.md
 
 jobs:
     build-and-deploy:
