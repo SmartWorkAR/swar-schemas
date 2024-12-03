@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@adobe/jsonschema2md": "^8.0.2"
+  },
+  "scripts": {
+  	"generate-docs": "jsonschema2md -d schemas/v1.2.1 -o docs"
+	}
+}
