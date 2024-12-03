@@ -1,0 +1,40 @@
+name: Generate and Deploy Documentation
+
+on:
+    push:
+        branches:
+            - master
+        paths:
+            - schemas/** # Trigger only when the schemas directory is updated
+            - package.json
+            - package-lock.json
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            # Step 1: Checkout the repository
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            # Step 2: Set up Node.js environment
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 23.3.0 # Use your project's Node.js version
+
+            # Step 3: Install dependencies
+            - name: Install dependencies
+              run: npm ci
+
+            # Step 4: Generate documentation
+            - name: Generate JSON Schema Documentation
+              run: npm run generate-docs
+
+            # Step 5: Deploy to GitHub Pages
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: docs # Directory where the documentation is generated
