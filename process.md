@@ -24,7 +24,7 @@ SWAR Version 1.2 process definition
 | [roles](#roles)             | `array`  | Optional | cannot be null | [SWAR Process Definition](process-properties-roles.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/roles")             |
 | [primaryKey](#primarykey)   | `array`  | Optional | cannot be null | [SWAR Process Definition](process-properties-primarykey.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/primaryKey")   |
 | [options](#options)         | `object` | Optional | cannot be null | [SWAR Process Definition](process-properties-options.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options")         |
-| [activities](#activities)   | `array`  | Required | cannot be null | [SWAR Process Definition](process-properties-activities.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/activities")   |
+| [activities](#activities)   | `object` | Required | cannot be null | [SWAR Process Definition](process-properties-activities.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/activities")   |
 
 ## name
 
@@ -136,13 +136,13 @@ Additional ad hoc properties
 
 ## activities
 
-The activities of the process
+The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}
 
 `activities`
 
 * is required
 
-* Type: `object[]` ([Details](process-properties-activities-items.md))
+* Type: `object` ([Details](process-properties-activities.md))
 
 * cannot be null
 
@@ -150,4 +150,4 @@ The activities of the process
 
 ### activities Type
 
-`object[]` ([Details](process-properties-activities-items.md))
+`object` ([Details](process-properties-activities.md))
