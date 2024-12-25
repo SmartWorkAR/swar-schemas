@@ -4,193 +4,73 @@
   "type": "object",
   "title": "SWAR Process Definition",
   "description": "SWAR Version 1.2 process definition",
-  "required": [
-    "name",
-    "activities"
-  ],
+  "required": ["name", "activities"],
   "additionalProperties": false,
   "properties": {
-    "name": {
-      "type": "string",
-      "description": "The name of the process (a short description)"
-    },
-    "description": {
-      "type": "string",
-      "description": "A detailed description of the process"
-    },
-    "title": {
-      "type": "string",
-      "description": "A one line description of the process (subject)"
-    },
-    "roles": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
+    "name": {"type": "string", "description": "The name of the process (a short description)"},
+    "description": {"type": "string", "description": "A detailed description of the process"},
+    "title": {"type": "string", "description": "A one line description of the process (subject)"},
+    "roles": {"type": "array", "items": {"type": "string"}},
     "primaryKey": {
       "type": "array",
       "description": "Define with input parameter fields are considered a primary key of a process instance.",
-      "items": {
-        "type": "string"
-      }
+      "items": {"type": "string"}
     },
-    "options": {
-      "type": "object",
-      "description": "Additional ad hoc properties",
-      "additionalProperties": true
-    },
+    "options": {"type": "object", "description": "Additional ad hoc properties", "additionalProperties": true},
     "activities": {
-      "description": "The activities of the process",
-      "type": "array",
-      "items": {
+      "type": "object",
+      "description": "The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}",
+      "additionalProperties": {
         "type": "object",
-        "required": [
-          "id",
-          "instructions"
-        ],
         "additionalProperties": false,
         "properties": {
-          "id": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
+          "description": {"type": "string", "description": "A Description for the activity"},
           "instructions": {
-            "type": "array",
-            "items": {
+            "description": "In SWAR 1.x an activity is defined by a map of instructions {id: instruction data}",
+            "type": "object",
+            "additionalProperties": {
               "type": "object",
               "additionalProperties": false,
               "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
+                "id": {"type": "string", "description": "The id of the instruction"},
+                "description": {"type": "string", "description": "A description of the instruction"},
+                "image": {"type": "string", "description": "A image associated with the instruction"},
                 "attachments": {
                   "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "description": "Documents attached to the current instruction, to be used as support documentation",
+                  "items": {"type": "string"}
                 },
-                "key": {
-                  "type": "string"
-                },
-                "goal": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "values": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "string"
-                  }
-                },
+                "key": {"type": "string"},
+                "goal": {"type": "array", "items": {"type": "string"}},
+                "values": {"type": "object", "additionalProperties": {"type": "string"}},
                 "subject": {"type": "array", "items": {"type": "string"}},
+                "type" : {"type": "string"},
                 "implementation": {
+                  "description": "How the Instruction is implemented: form, photos, video, etc",
                   "oneOf": [
                     {
                       "type": "object",
-                      "required": [
-                        "type",
-                        "fields"
-                      ],
+                      "required": ["type", "fields"],
                       "properties": {
                         "type": {
+                          "type": "string",
                           "const": "form"
                         },
-                        "title": {
-                          "type": "string"
-                        },
+                        "title": {"type": "string"},
+                        "key": {"type": "string"},
                         "fields": {
-                          "type": "array",
-                          "items": {
+                          "type": "object",
+                          "additionalProperties": {
                             "type": "object",
-                            "required": [
-                              "id",
-                              "type"
-                            ],
                             "additionalProperties": false,
                             "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "type": {
-                                "type": "string"
-                              },
-                              "required": {
-                                "type": "boolean"
-                              },
-                              "check": {
-                                "type": "string"
-                              },
-                              "placeholder": {
-                                "type": "string"
-                              },
-                              "width": {
-                                "type": "string"
-                              },
-                              "origin": {
-                                "type": "string"
-                              },
-                              "default": {
-                                "type": "string"
-                              }
-                            }
-                          }
-                        },
-                        "key": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "required": [
-                        "type",
-                        "questions"
-                      ],
-                      "properties": {
-                        "type": {
-                          "const": "multipleChoice"
-                        },
-                        "message": {
-                          "type": "string"
-                        },
-                        "questions": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "required": [
-                              "id",
-                              "answers"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "text": {
-                                "type": "string"
-                              },
-                              "answers": {
-                                "type": "array",
-                                "items": {
-                                  "type": "string"
-                                }
-                              },
-                              "default": {
-                                "type": "string"
-                              },
-                              "height": {
-                                "type": "integer"
-                              }
+                              "type": {"type": "string"},
+                              "required": {"type": "boolean"},
+                              "check": {"type": "string"},
+                              "placeholder": {"type": "string"},
+                              "width": {"type": "string"},
+                              "origin": {"type": "string"},
+                              "default": {"type": "string"}
                             }
                           }
                         }
@@ -217,8 +97,33 @@
                         "type": {
                           "const": "video"
                         },
-                        "description" : { "type": "string"},
+                        "description": {"type": "string"},
                         "quality": {"type": "integer"}
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": ["questions"],
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "const": "multipleChoice"
+                        },
+                        "message": {"type": "string"},
+                        "questions": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": ["id", "answers"],
+                            "properties": {
+                              "id": {"type": "string"},
+                              "text": {"type": "string"},
+                              "answers": {"type": "array", "items": {"type": "string"}},
+                              "default": {"type": "string"},
+                              "height": {"type": "integer"}
+                            }
+                          }
+                        }
                       }
                     },
                     {
@@ -227,10 +132,50 @@
                         "type": {
                           "const": "doubleInput"
                         },
-                        "description" : { "type": "string"},
+                        "description": {"type": "string"},
                         "labels": {"type": "array", "items": {"type": "string"}},
                         "referenceValue": {"type": "string"},
                         "tolerance": {"type": "number"}
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "const": "form2"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "const": "approvalRequestPoint"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "const": "checkTolerance"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "const": "freeForm"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "const": "tripleInputPhoto"
+                        }
                       }
                     }
                   ]
@@ -238,7 +183,8 @@
               }
             }
           }
-        }
+        },
+        "required": ["instructions"]
       }
     }
   }
