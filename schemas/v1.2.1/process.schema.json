@@ -7,16 +7,37 @@
   "required": ["name", "activities"],
   "additionalProperties": false,
   "properties": {
-    "name": {"type": "string", "description": "The name of the process (a short description)"},
-    "description": {"type": "string", "description": "A detailed description of the process"},
-    "title": {"type": "string", "description": "A one line description of the process (subject)"},
-    "roles": {"type": "array", "items": {"type": "string"}},
+    "name": {"type": "string", "description": "The name of the process (a short description). This accepts variables from the InitialForm"},
+    "description": {"type": "string", "description": "A detailed description of the process. This accepts variables from the InitialForm"},
+    "title": {"type": "string", "description": "A one line description of the process (subject). This accepts variables from the InitialForm"},
+    "roles": {"type": "array","description": "Define which users categories can do the protocol and see its results", "items": {"type": "string"}},
     "primaryKey": {
       "type": "array",
       "description": "Define with input parameter fields are considered a primary key of a process instance.",
       "items": {"type": "string"}
     },
-    "options": {"type": "object", "description": "Additional ad hoc properties", "additionalProperties": true},
+    "options": {"type": "object", "description": "Additional ad hoc properties", "properties": {
+      "showQr": {
+        "type": "boolean",
+        "description": "The mission can be initiated from a device using a QR code."
+      },
+      "canEditOnFinish": {
+        "type": "boolean",
+        "description": "After completing a mission, it can be modified."
+      },
+      "canUploadBeforeFinish": {
+        "type": "boolean",
+        "description": "The mission can be partially uploaded to the server."
+      },
+      "mission_can_be_shared": {
+        "type": "boolean",
+        "description": "If a mission was created locally, it can be shared between users of the same category."
+      },
+      "canCreateOnDevice": {
+        "type": "boolean",
+        "description": "The mission can be created from the device. Default true"
+      }
+    }, "additionalProperties": false},
     "activities": {
       "type": "object",
       "description": "The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}",
@@ -185,7 +206,8 @@
           }
         },
         "required": ["instructions"]
-      }
+      },
+      "required": ["InitialForm"]
     }
   }
 }
