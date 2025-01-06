@@ -28,7 +28,7 @@ SWAR Version 1.2 process definition
 
 ## name
 
-The name of the process (a short description)
+The name of the process (a short description). This accepts variables from the InitialForm
 
 `name`
 
@@ -46,7 +46,7 @@ The name of the process (a short description)
 
 ## description
 
-A detailed description of the process
+A detailed description of the process. This accepts variables from the InitialForm
 
 `description`
 
@@ -64,7 +64,7 @@ A detailed description of the process
 
 ## title
 
-A one line description of the process (subject)
+A one line description of the process (subject). This accepts variables from the InitialForm
 
 `title`
 
@@ -82,7 +82,7 @@ A one line description of the process (subject)
 
 ## roles
 
-
+Define which users categories can do the protocol and see its results
 
 `roles`
 

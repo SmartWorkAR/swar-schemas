@@ -1,15 +1,15 @@
-# Untitled string in SWAR Process Definition Schema
+# Untitled boolean in SWAR Process Definition Schema
 
 ```txt
-https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/name
+https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/canUploadBeforeFinish
 ```
 
-The name of the process (a short description). This accepts variables from the InitialForm
+The mission can be partially uploaded to the server.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [process.schema.json\*](../out/process.schema.json "open original schema") |
 
-## name Type
+## canUploadBeforeFinish Type
 
-`string`
+`boolean`

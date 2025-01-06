@@ -50,7 +50,7 @@
 
 ### Arrays
 
-* [Untitled array in SWAR Process Definition](./process-properties-roles.md) – `https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/roles`
+* [Untitled array in SWAR Process Definition](./process-properties-roles.md "Define which users categories can do the protocol and see its results") – `https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/roles`
 
 * [Untitled array in SWAR Process Definition](./process-properties-primarykey.md "Define with input parameter fields are considered a primary key of a process instance") – `https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/primaryKey`
 

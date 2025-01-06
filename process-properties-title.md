@@ -4,7 +4,7 @@
 https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/title
 ```
 
-A one line description of the process (subject)
+A one line description of the process (subject). This accepts variables from the InitialForm
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |

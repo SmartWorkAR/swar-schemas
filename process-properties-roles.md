@@ -4,7 +4,7 @@
 https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/roles
 ```
 
-
+Define which users categories can do the protocol and see its results
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |
