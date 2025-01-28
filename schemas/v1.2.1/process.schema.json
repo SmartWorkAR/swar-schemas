@@ -1,213 +1,336 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json",
-  "type": "object",
-  "title": "SWAR Process Definition",
-  "description": "SWAR Version 1.2 process definition",
-  "required": ["name", "activities"],
-  "additionalProperties": false,
-  "properties": {
-    "name": {"type": "string", "description": "The name of the process (a short description). This accepts variables from the InitialForm"},
-    "description": {"type": "string", "description": "A detailed description of the process. This accepts variables from the InitialForm"},
-    "title": {"type": "string", "description": "A one line description of the process (subject). This accepts variables from the InitialForm"},
-    "roles": {"type": "array","description": "Define which users categories can do the protocol and see its results", "items": {"type": "string"}},
-    "primaryKey": {
-      "type": "array",
-      "description": "Define with input parameter fields are considered a primary key of a process instance.",
-      "items": {"type": "string"}
-    },
-    "options": {"type": "object", "description": "Additional ad hoc properties", "properties": {
-      "showQr": {
-        "type": "boolean",
-        "description": "The mission can be initiated from a device using a QR code."
-      },
-      "canEditOnFinish": {
-        "type": "boolean",
-        "description": "After completing a mission, it can be modified."
-      },
-      "canUploadBeforeFinish": {
-        "type": "boolean",
-        "description": "The mission can be partially uploaded to the server."
-      },
-      "mission_can_be_shared": {
-        "type": "boolean",
-        "description": "If a mission was created locally, it can be shared between users of the same category."
-      },
-      "canCreateOnDevice": {
-        "type": "boolean",
-        "description": "The mission can be created from the device. Default true"
-      }
-    }, "additionalProperties": false},
-    "activities": {
-      "type": "object",
-      "description": "The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}",
-      "additionalProperties": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "description": {"type": "string", "description": "A Description for the activity"},
-          "instructions": {
-            "description": "In SWAR 1.x an activity is defined by a map of instructions {id: instruction data}",
-            "type": "object",
-            "additionalProperties": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "id": {"type": "string", "description": "The id of the instruction"},
-                "description": {"type": "string", "description": "A description of the instruction"},
-                "image": {"type": "string", "description": "A image associated with the instruction"},
-                "attachments": {
-                  "type": "array",
-                  "description": "Documents attached to the current instruction, to be used as support documentation",
-                  "items": {"type": "string"}
-                },
-                "key": {"type": "string"},
-                "goal": {"type": "array", "items": {"type": "string"}},
-                "values": {"type": "object", "additionalProperties": {"type": "string"}},
-                "subject": {"type": "array", "items": {"type": "string"}},
-                "type" : {"type": "string"},
-                "implementation": {
-                  "description": "How the Instruction is implemented: form, photos, video, etc",
-                  "oneOf": [
-                    {
-                      "type": "object",
-                      "required": ["type", "fields"],
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "const": "form"
-                        },
-                        "title": {"type": "string"},
-                        "key": {"type": "string"},
-                        "fields": {
-                          "type": "object",
-                          "additionalProperties": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                              "type": {"type": "string"},
-                              "required": {"type": "boolean"},
-                              "check": {"type": "string"},
-                              "placeholder": {"type": "string"},
-                              "width": {"type": "string"},
-                              "origin": {"type": "string"},
-                              "default": {"type": "string"}
-                            }
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "const": "photos"
-                        },
-                        "photos": {
-                          "type": "object",
-                          "additionalProperties": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "required": ["quality"],
-                      "properties": {
-                        "type": {
-                          "const": "video"
-                        },
-                        "description": {"type": "string"},
-                        "quality": {"type": "integer"}
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "required": ["questions"],
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "const": "multipleChoice"
-                        },
-                        "message": {"type": "string"},
-                        "questions": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "required": ["id", "answers"],
-                            "properties": {
-                              "id": {"type": "string"},
-                              "text": {"type": "string"},
-                              "answers": {"type": "array", "items": {"type": "string"}},
-                              "default": {"type": "string"},
-                              "height": {"type": "integer"}
-                            }
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "const": "doubleInput"
-                        },
-                        "description": {"type": "string"},
-                        "labels": {"type": "array", "items": {"type": "string"}},
-                        "referenceValue": {"type": "string"},
-                        "tolerance": {"type": "number"}
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "const": "form2"
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "const": "approvalRequestPoint"
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "const": "checkTolerance"
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "const": "freeForm"
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "const": "tripleInputPhoto"
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        },
-        "required": ["instructions"]
-      },
-      "required": ["InitialForm"]
-    }
-  }
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json",
+	"type": "object",
+	"title": "SWAR Process Definition",
+	"description": "SWAR Version 1.2 process definition",
+	"required": [
+		"name",
+		"activities"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"name": {
+			"type": "string",
+			"description": "The name of the process (a short description). This accepts variables from the InitialForm"
+		},
+		"description": {
+			"type": "string",
+			"description": "A detailed description of the process. This accepts variables from the InitialForm"
+		},
+		"title": {
+			"type": "string",
+			"description": "A one line description of the process (subject). This accepts variables from the InitialForm"
+		},
+		"roles": {
+			"type": "array",
+			"description": "Define which users categories can do the protocol and see its results",
+			"items": {
+				"type": "string"
+			}
+		},
+		"primaryKey": {
+			"type": "array",
+			"description": "Define with input parameter fields are considered a primary key of a process instance.",
+			"items": {
+				"type": "string"
+			}
+		},
+		"options": {
+			"type": "object",
+			"description": "Additional ad hoc properties",
+			"properties": {
+				"showQr": {
+					"type": "boolean",
+					"description": "The mission can be initiated from a device using a QR code."
+				},
+				"canEditOnFinish": {
+					"type": "boolean",
+					"description": "After completing a mission, it can be modified."
+				},
+				"canUploadBeforeFinish": {
+					"type": "boolean",
+					"description": "The mission can be partially uploaded to the server."
+				},
+				"mission_can_be_shared": {
+					"type": "boolean",
+					"description": "If a mission was created locally, it can be shared between users of the same category."
+				},
+				"canCreateOnDevice": {
+					"type": "boolean",
+					"description": "The mission can be created from the device. Default true"
+				}
+			},
+			"additionalProperties": false
+		},
+		"activities": {
+			"type": "object",
+			"description": "The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}",
+			"additionalProperties": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"description": {
+						"type": "string",
+						"description": "A Description for the activity"
+					},
+					"instructions": {
+						"description": "In SWAR 1.x an activity is defined by a map of instructions {id: instruction data}",
+						"type": "object",
+						"additionalProperties": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"id": {
+									"type": "string",
+									"description": "The id of the instruction"
+								},
+								"description": {
+									"type": "string",
+									"description": "A description of the instruction"
+								},
+								"image": {
+									"type": "string",
+									"description": "A image associated with the instruction"
+								},
+								"attachments": {
+									"type": "array",
+									"description": "Documents attached to the current instruction, to be used as support documentation",
+									"items": {
+										"type": "string"
+									}
+								},
+								"key": {
+									"type": "string"
+								},
+								"goal": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"values": {
+									"type": "object",
+									"additionalProperties": {
+										"type": "string"
+									}
+								},
+								"subject": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"type": {
+									"type": "string"
+								},
+								"implementation": {
+									"description": "How the Instruction is implemented: form, photos, video, etc",
+									"oneOf": [
+										{
+											"type": "object",
+											"required": [
+												"type",
+												"fields"
+											],
+											"properties": {
+												"type": {
+													"type": "string",
+													"const": "form"
+												},
+												"title": {
+													"type": "string"
+												},
+												"key": {
+													"type": "string"
+												},
+												"fields": {
+													"type": "object",
+													"additionalProperties": {
+														"type": "object",
+														"additionalProperties": false,
+														"properties": {
+															"type": {
+																"type": "string"
+															},
+															"required": {
+																"type": "boolean"
+															},
+															"check": {
+																"type": "string"
+															},
+															"placeholder": {
+																"type": "string"
+															},
+															"width": {
+																"type": "string"
+															},
+															"origin": {
+																"type": "string"
+															},
+															"default": {
+																"type": "string"
+															},
+															"rowId": {
+																"type": "string"
+															}
+														}
+													}
+												}
+											}
+										},
+										{
+											"type": "object",
+											"properties": {
+												"type": {
+													"const": "photos"
+												},
+												"photos": {
+													"type": "object",
+													"additionalProperties": {
+														"type": "string"
+													}
+												}
+											}
+										},
+										{
+											"type": "object",
+											"required": [
+												"quality"
+											],
+											"properties": {
+												"type": {
+													"const": "video"
+												},
+												"description": {
+													"type": "string"
+												},
+												"quality": {
+													"type": "integer"
+												}
+											}
+										},
+										{
+											"type": "object",
+											"required": [
+												"questions"
+											],
+											"properties": {
+												"type": {
+													"type": "string",
+													"const": "multipleChoice"
+												},
+												"message": {
+													"type": "string"
+												},
+												"questions": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"required": [
+															"id",
+															"answers"
+														],
+														"properties": {
+															"id": {
+																"type": "string"
+															},
+															"text": {
+																"type": "string"
+															},
+															"answers": {
+																"type": "array",
+																"items": {
+																	"type": "string"
+																}
+															},
+															"default": {
+																"type": "string"
+															},
+															"height": {
+																"type": "integer"
+															}
+														}
+													}
+												}
+											}
+										},
+										{
+											"type": "object",
+											"properties": {
+												"type": {
+													"const": "doubleInput"
+												},
+												"description": {
+													"type": "string"
+												},
+												"labels": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"referenceValue": {
+													"type": "string"
+												},
+												"tolerance": {
+													"type": "number"
+												}
+											}
+										},
+										{
+											"type": "object",
+											"properties": {
+												"type": {
+													"const": "form2"
+												}
+											}
+										},
+										{
+											"type": "object",
+											"properties": {
+												"type": {
+													"const": "approvalRequestPoint"
+												}
+											}
+										},
+										{
+											"type": "object",
+											"properties": {
+												"type": {
+													"const": "checkTolerance"
+												}
+											}
+										},
+										{
+											"type": "object",
+											"properties": {
+												"type": {
+													"const": "freeForm"
+												}
+											}
+										},
+										{
+											"type": "object",
+											"properties": {
+												"type": {
+													"const": "tripleInputPhoto"
+												}
+											}
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"required": [
+					"instructions"
+				]
+			},
+			"required": [
+				"InitialForm"
+			]
+		}
+	}
 }

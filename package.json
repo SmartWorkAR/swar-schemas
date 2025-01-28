@@ -3,6 +3,7 @@
     "@adobe/jsonschema2md": "^8.0.2"
   },
   "scripts": {
-  	"generate-docs": "jsonschema2md -d schemas/v1.2.1 -o docs"
+  	"generate-docs": "jsonschema2md -d schemas/v1.2.1 -o docs",
+    "generate-schema-doc": "pip install json-schema-for-humans; generate-schema-doc --config template_name=md  schemas/v1.2.1/process.schema.json docs/README.md"
 	}
 }
