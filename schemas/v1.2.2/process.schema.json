@@ -7,8 +7,7 @@
   "required": [
     "name",
     "activities",
-    "roles",
-    "primaryKey"
+    "roles"
   ],
   "additionalProperties": false,
   "properties": {
@@ -335,9 +334,6 @@
                     }
                   },
                   "required": [
-                    "id",
-                    "key",
-                    "description",
                     "implementation"
                   ]
                 }
