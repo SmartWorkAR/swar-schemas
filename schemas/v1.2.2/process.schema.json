@@ -1,0 +1,272 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://smartworkar.github.io/swar-schemas/schemas/v1.2.2/process.schema.json",
+  "type": "object",
+  "title": "SWAR Process Definition",
+  "description": "SWAR Version 1.2 process definition",
+  "required": [
+    "name",
+    "activities",
+    "roles",
+    "primaryKey"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the process (a short description). This accepts variables from the InitialForm.",
+      "pattern": "^[A-Za-z0-9_]+$"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed description of the process. This accepts variables from the InitialForm."
+    },
+    "title": {
+      "type": "string",
+      "description": "A one line description of the process (subject). This accepts variables from the InitialForm."
+    },
+    "roles": {
+      "type": "array",
+      "description": "Define which users categories can do the protocol and see its results.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "primaryKey": {
+      "type": "array",
+      "description": "Define with input parameter fields are considered a primary key of a process instance.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "options": {
+      "type": "object",
+      "description": "Additional ad hoc properties.",
+      "properties": {
+        "showQr": {
+          "type": "boolean",
+          "description": "The mission can be initiated from a device using a QR code."
+        },
+        "canEditOnFinish": {
+          "type": "boolean",
+          "description": "After completing a mission, it can be modified."
+        },
+        "canUploadBeforeFinish": {
+          "type": "boolean",
+          "description": "The mission can be partially uploaded to the server."
+        },
+        "mission_can_be_shared": {
+          "type": "boolean",
+          "description": "If a mission was created locally, it can be shared between users of the same category."
+        },
+        "canCreateOnDevice": {
+          "type": "boolean",
+          "description": "The mission can be created from the device. Default true."
+        }
+      },
+      "additionalProperties": false
+    },
+    "activities": {
+      "type": "object",
+      "description": "The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}.",
+      "minProperties": 2,
+      "patternProperties": {
+        "^[A-Za-z0-9_]+$": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string",
+              "description": "A Description for the activity."
+            },
+            "instructions": {
+              "description": "In SWAR 1.x an activity is defined by a map of instructions {id: instruction data}.",
+              "type": "object",
+              "minProperties": 1,
+              "patternProperties": {
+                "^[A-Za-z0-9_]+$": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The id of the instruction."
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "A description of the instruction."
+                    },
+                    "image": {
+                      "type": "string",
+                      "description": "A image associated with the instruction."
+                    },
+                    "attachments": {
+                      "type": "array",
+                      "description": "Documents attached to the current instruction, to be used as support documentation.",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "key": {
+                      "type": "string"
+                    },
+                    "goal": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "values": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      }
+                    },
+                    "subject": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "implementation": {
+                      "description": "How the Instruction is implemented: form, photos, video, etc.",
+                      "minProperties": 1,
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "required": [
+                            "type",
+                            "fields"
+                          ],
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "const": "form"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "key": {
+                              "type": "string"
+                            },
+                            "fields": {
+                              "type": "object",
+                              "additionalProperties": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "required": {
+                                    "type": "boolean"
+                                  },
+                                  "check": {
+                                    "type": "string",
+                                    "pattern": "^validar(String|Fecha|InNumero|OutNumero)\\(.+\\);$"
+                                  },
+                                  "placeholder": {
+                                    "type": "string"
+                                  },
+                                  "width": {
+                                    "type": "string"
+                                  },
+                                  "origin": {
+                                    "type": "string"
+                                  },
+                                  "default": {
+                                    "type": "string"
+                                  },
+                                  "rowId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "required",
+                                  "placeholder",
+                                  "check"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "photos"
+                            },
+                            "photos": {
+                              "type": "object",
+                              "additionalProperties": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "required": [
+                            "type",
+                            "message",
+                            "questions"
+                          ],
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "const": "multipleChoice"
+                            },
+                            "message": {
+                              "type": "string"
+                            },
+                            "questions": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "text": {
+                                    "type": "string"
+                                  },
+                                  "answers": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "key": {
+                                          "type": "string"
+                                        },
+                                        "value": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "default": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "key",
+                    "description",
+                    "implementation"
+                  ]
+                }
+              }
+            }
+          },
+          "required": [
+            "instructions"
+          ]
+        }
+      }
+    }
+  }
+}
