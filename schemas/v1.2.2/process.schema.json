@@ -14,8 +14,7 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "The name of the process (a short description). This accepts variables from the InitialForm.",
-      "pattern": "^[A-Za-z0-9_]+$"
+      "description": "The name of the process (a short description). This accepts variables from the InitialForm."
     },
     "description": {
       "type": "string",
@@ -128,6 +127,9 @@
                         "type": "string"
                       }
                     },
+                    "type": {
+                      "type": "string"
+                    },
                     "implementation": {
                       "description": "How the Instruction is implemented: form, photos, video, etc.",
                       "minProperties": 1,
@@ -155,6 +157,9 @@
                                 "type": "object",
                                 "additionalProperties": false,
                                 "properties": {
+                                  "type": {
+                                    "type": "string"
+                                  },
                                   "required": {
                                     "type": "boolean"
                                   },
@@ -204,8 +209,23 @@
                         {
                           "type": "object",
                           "required": [
-                            "type",
-                            "message",
+                            "quality"
+                          ],
+                          "properties": {
+                            "type": {
+                              "const": "video"
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "quality": {
+                              "type": "integer"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "required": [
                             "questions"
                           ],
                           "properties": {
@@ -220,6 +240,10 @@
                               "type": "array",
                               "items": {
                                 "type": "object",
+                                "required": [
+                                  "id",
+                                  "answers"
+                                ],
                                 "properties": {
                                   "id": {
                                     "type": "string"
@@ -230,22 +254,80 @@
                                   "answers": {
                                     "type": "array",
                                     "items": {
-                                      "type": "object",
-                                      "properties": {
-                                        "key": {
-                                          "type": "string"
-                                        },
-                                        "value": {
-                                          "type": "string"
-                                        }
-                                      }
+                                      "type": "string"
                                     }
                                   },
                                   "default": {
                                     "type": "string"
+                                  },
+                                  "height": {
+                                    "type": "integer"
                                   }
                                 }
                               }
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "doubleInput"
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "labels": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "referenceValue": {
+                              "type": "string"
+                            },
+                            "tolerance": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "form2"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "approvalRequestPoint"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "checkTolerance"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "freeForm"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "tripleInputPhoto"
                             }
                           }
                         }
@@ -266,7 +348,10 @@
             "instructions"
           ]
         }
-      }
+      },
+      "required": [
+        "InitialForm"
+      ]
     }
   }
 }
