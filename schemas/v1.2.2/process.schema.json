@@ -184,8 +184,7 @@
                                 },
                                 "required": [
                                   "required",
-                                  "placeholder",
-                                  "check"
+                                  "placeholder"
                                 ]
                               }
                             }
@@ -332,10 +331,7 @@
                         }
                       ]
                     }
-                  },
-                  "required": [
-                    "implementation"
-                  ]
+                  }
                 }
               }
             }
