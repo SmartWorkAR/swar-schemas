@@ -164,7 +164,7 @@
                                   },
                                   "check": {
                                     "type": "string",
-                                    "pattern": "^validar(String|Fecha|InNumero|OutNumero)\\(.+\\);$"
+                                    "pattern": "^validar(String|Fecha|InNumero|OutNumero|MismoValor|FechaUI)\\(.+\\)[ ;]*$"
                                   },
                                   "placeholder": {
                                     "type": "string"
