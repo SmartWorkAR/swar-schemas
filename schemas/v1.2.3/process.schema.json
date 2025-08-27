@@ -1,0 +1,534 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json",
+  "version": "1.2.3",
+  "type": "object",
+  "title": "SWAR Process Definition",
+  "description": "SWAR Version 1.2 process definition",
+  "required": [
+    "name",
+    "activities",
+    "roles"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the process (a short description). This accepts variables from the InitialForm."
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed description of the process. This accepts variables from the InitialForm."
+    },
+    "title": {
+      "type": "string",
+      "description": "A one line description of the process (subject). This accepts variables from the InitialForm."
+    },
+    "roles": {
+      "type": "array",
+      "description": "Define which users categories can do the protocol and see its results.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "primaryKey": {
+      "type": "array",
+      "description": "Define which input parameter fields are considered a primary key of a process instance.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "options": {
+      "type": "object",
+      "description": "Additional ad hoc properties.",
+      "properties": {
+        "showQr": {
+          "type": "boolean",
+          "description": "The mission can be initiated from a device using a QR code."
+        },
+        "canEditOnFinish": {
+          "type": "boolean",
+          "description": "After completing a mission, it can be modified."
+        },
+        "canUploadBeforeFinish": {
+          "type": "boolean",
+          "description": "The mission can be partially uploaded to the server."
+        },
+        "mission_can_be_shared": {
+          "type": "boolean",
+          "description": "If a mission was created locally, it can be shared between users of the same category."
+        },
+        "canCreateOnDevice": {
+          "type": "boolean",
+          "description": "The mission can be created from the device. Default true."
+        }
+      },
+      "additionalProperties": false
+    },
+    "activities": {
+      "type": "object",
+      "description": "The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}.",
+      "minProperties": 2,
+      "patternProperties": {
+        "^[A-Za-z0-9_]+$": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string",
+              "description": "A Description for the activity."
+            },
+            "instructions": {
+              "description": "In SWAR 1.x an activity is defined by a map of instructions {id: instruction data}.",
+              "type": "object",
+              "minProperties": 1,
+              "patternProperties": {
+                "^[A-Za-z0-9_]+$": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "The id of the instruction."
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "A description of the instruction."
+                    },
+                    "image": {
+                      "type": "string",
+                      "description": "A image associated with the instruction."
+                    },
+                    "attachments": {
+                      "type": "array",
+                      "description": "Documents attached to the current instruction, to be used as support documentation.",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "key": {
+                      "type": "string"
+                    },
+                    "goal": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "values": {
+                      "type": "object",
+                      "properties": {
+                        "right": {
+                          "type": "string"
+                        },
+                        "wrong": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "subject": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "Instruction_Imagen": {
+                      "type": "string"
+                    },
+                    "Instruction_XXX": {
+                      "type": "string"
+                    },
+                    "Instruction_id": {
+                      "type": "string"
+                    },
+                    "Instruction_text": {
+                      "type": "string"
+                    },
+                    "Material adicional 1": {
+                      "type": "string"
+                    },
+                    "Material adicional 2": {
+                      "type": "string"
+                    },
+                    "Material adicional 3": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "implementation": {
+                      "description": "How the Instruction is implemented: form, photos, video, etc.",
+                      "minProperties": 1,
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "required": [
+                            "type",
+                            "fields"
+                          ],
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "const": "form"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "key": {
+                              "type": "string"
+                            },
+                            "fields": {
+                              "type": "object",
+                              "patternProperties": {
+                                "^[a-zA-Z_][a-zA-Z0-9_]*$": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "required": {
+                                      "type": "boolean"
+                                    },
+                                    "check": {
+                                      "type": "string",
+                                      "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI)|VerificarMismoValor)\\(.+\\)[ ;]*$"
+                                    },
+                                    "placeholder": {
+                                      "type": "string"
+                                    },
+                                    "label": {
+                                      "type": "string"
+                                    },
+                                    "width": {
+                                      "type": "string"
+                                    },
+                                    "rowId": {
+                                      "type": "string"
+                                    },
+                                    "options": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "height": {
+                                      "type": "number"
+                                    },
+                                    "origin": {
+                                      "type": "number"
+                                    },
+                                    "optionWidth": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "required",
+                                    "placeholder"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "photos"
+                            },
+                            "photos": {
+                              "type": "object",
+                              "patternProperties": {
+                                "^[a-zA-Z_][a-zA-Z0-9_]*$": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "photos"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "required": [
+                            "type",
+                            "description",
+                            "quality"
+                          ],
+                          "properties": {
+                            "type": {
+                              "const": "video"
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "quality": {
+                              "type": "integer"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "multipleChoice"
+                            },
+                            "questions": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "text": {
+                                    "type": "string"
+                                  },
+                                  "answers": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "default": {
+                                    "type": "string"
+                                  },
+                                  "height": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "id",
+                                  "text",
+                                  "answers"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "questions"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "doubleInput"
+                            },
+                            "compararCon": {
+                              "type": "string"
+                            },
+                            "dsc": {
+                              "type": "string"
+                            },
+                            "input1Dsc": {
+                              "type": "string"
+                            },
+                            "input2Dsc": {
+                              "type": "string"
+                            },
+                            "tolerance": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "dsc",
+                            "compararCon",
+                            "input1Dsc",
+                            "input2Dsc",
+                            "tolerance"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "const": "form2"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "format": {
+                              "type": "string"
+                            },
+                            "key": {
+                              "type": "string"
+                            },
+                            "fields": {
+                              "type": "object"
+                            },
+                            "expressions": {
+                              "type": "object",
+                              "patternProperties": {
+                                "^[a-zA-Z_][a-zA-Z0-9_]*_(valid|enabled|visible)$": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "description": "Expresiones de lógica para validar campos, habilitarlos o hacerlos visibles. El sufijo _valid, _enabled o _visible indica la regla a aplicar."
+                            }
+                          },
+                          "required": [
+                            "type"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "approvalRequestPoint"
+                            }
+                          },
+                          "required": [
+                            "type"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "checkTolerance"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "required": [
+                            "type",
+                            "image",
+                            "inputs"
+                          ],
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "const": "freeForm"
+                            },
+                            "image": {
+                              "type": "string"
+                            },
+                            "inputs": {
+                              "type": "object",
+                              "additionalProperties": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "type": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "obligatorio": {
+                                    "type": "boolean"
+                                  },
+                                  "revisar": {
+                                    "type": "string",
+                                    "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI)|VerificarMismoValor)\\(.+\\)[ ;]*$"
+                                  },
+                                  "placeholder": {
+                                    "type": "string"
+                                  },
+                                  "width": {
+                                    "type": "string"
+                                  },
+                                  "height": {
+                                    "type": "string"
+                                  },
+                                  "pos": {
+                                    "type": "array",
+                                    "items": {
+                                      "anyOf": [
+                                        {
+                                          "type": "number"
+                                        },
+                                        {
+                                          "type": "string"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "required": [
+                                  "id",
+                                  "obligatorio",
+                                  "placeholder",
+                                  "type"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "tripleInputPhoto"
+                            },
+                            "acceptable": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "max": {
+                                  "type": "string"
+                                },
+                                "min": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "foto1Dsc": {
+                              "type": "string"
+                            },
+                            "foto2Dsc": {
+                              "type": "string"
+                            },
+                            "foto3Dsc": {
+                              "type": "string"
+                            },
+                            "input1Dsc": {
+                              "type": "string"
+                            },
+                            "input2Dsc": {
+                              "type": "string"
+                            },
+                            "input3Dsc": {
+                              "type": "string"
+                            },
+                            "tolerancia": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "implementation"
+                  ]
+                }
+              }
+            }
+          },
+          "required": [
+            "instructions"
+          ]
+        }
+      },
+      "required": [
+        "InitialForm"
+      ]
+    }
+  }
+}
