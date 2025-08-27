@@ -184,6 +184,9 @@
                                   "type": "object",
                                   "additionalProperties": false,
                                   "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
                                     "required": {
                                       "type": "boolean"
                                     },
@@ -194,45 +197,25 @@
                                     "placeholder": {
                                       "type": "string"
                                     },
-                                    "label": {
-                                      "type": "string"
+                                    "origin": {
+                                      "type": "number"
                                     },
                                     "width": {
                                       "type": "string"
                                     },
-                                    "rowId": {
-                                      "type": "string"
-                                    },
-                                    "options": {
-                                      "type": "array",
-                                      "items": {
-                                        "type": "string"
-                                      }
-                                    },
                                     "default": {
                                       "type": "string"
                                     },
-                                    "height": {
-                                      "type": "number"
-                                    },
-                                    "origin": {
-                                      "type": "number"
-                                    },
-                                    "optionWidth": {
+                                    "rowId": {
                                       "type": "string"
                                     }
                                   },
                                   "required": [
                                     "required",
-                                    "check",
                                     "placeholder"
                                   ]
                                 }
-                              },
-                              "required": [
-                                "type",
-                                "fields"
-                              ]
+                              }
                             }
                           }
                         },
@@ -281,6 +264,9 @@
                             "type": {
                               "const": "multipleChoice"
                             },
+                            "message": {
+                              "type": "string"
+                            },
                             "questions": {
                               "type": "array",
                               "items": {
@@ -315,6 +301,7 @@
                           },
                           "required": [
                             "type",
+                            "message",
                             "questions"
                           ]
                         },
@@ -324,28 +311,28 @@
                             "type": {
                               "const": "doubleInput"
                             },
-                            "compararCon": {
+                            "description": {
                               "type": "string"
                             },
-                            "dsc": {
-                              "type": "string"
+                            "labels": {
+                              "type": "array",
+                              "minItems": 2,
+                              "items": {
+                                "type": "string"
+                              }
                             },
-                            "input1Dsc": {
-                              "type": "string"
-                            },
-                            "input2Dsc": {
+                            "referenceValue": {
                               "type": "string"
                             },
                             "tolerance": {
-                              "type": "integer"
+                              "type": "number"
                             }
                           },
                           "required": [
                             "type",
-                            "dsc",
-                            "compararCon",
-                            "input1Dsc",
-                            "input2Dsc",
+                            "description",
+                            "labels",
+                            "referenceValue",
                             "tolerance"
                           ]
                         },
@@ -359,14 +346,57 @@
                             "title": {
                               "type": "string"
                             },
-                            "format": {
-                              "type": "string"
-                            },
-                            "key": {
-                              "type": "string"
-                            },
                             "fields": {
-                              "type": "object"
+                              "type": "object",
+                              "patternProperties": {
+                                "^[a-zA-Z_][a-zA-Z0-9_]*$": {
+                                  "type": "object",
+                                  "additionalProperties": false,
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "options": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "boolean"
+                                    },
+                                    "label": {
+                                      "type": "string"
+                                    },
+                                    "check": {
+                                      "type": "string",
+                                      "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI)|VerificarMismoValor)\\(.+\\)[ ;]*$"
+                                    },
+                                    "placeholder": {
+                                      "type": "string"
+                                    },
+                                    "origin": {
+                                      "type": "number"
+                                    },
+                                    "width": {
+                                      "type": "string"
+                                    },
+                                    "optionWidth": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "rowId": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "required",
+                                    "placeholder"
+                                  ]
+                                }
+                              }
                             },
                             "expressions": {
                               "type": "object",
@@ -382,7 +412,9 @@
                             }
                           },
                           "required": [
-                            "type"
+                            "type",
+                            "fields",
+                            "expressions"
                           ]
                         },
                         {
@@ -402,14 +434,17 @@
                             "type": {
                               "const": "checkTolerance"
                             }
-                          }
+                          },
+                          "required": [
+                            "type"
+                          ]
                         },
                         {
                           "type": "object",
                           "required": [
                             "type",
                             "image",
-                            "inputs"
+                            "fields"
                           ],
                           "properties": {
                             "type": {
@@ -419,22 +454,22 @@
                             "image": {
                               "type": "string"
                             },
-                            "inputs": {
+                            "fields": {
                               "type": "object",
                               "additionalProperties": {
                                 "type": "object",
                                 "additionalProperties": false,
                                 "properties": {
-                                  "type": {
-                                    "type": "string"
-                                  },
                                   "id": {
                                     "type": "string"
                                   },
-                                  "obligatorio": {
+                                  "type": {
+                                    "type": "string"
+                                  },
+                                  "required": {
                                     "type": "boolean"
                                   },
-                                  "revisar": {
+                                  "check": {
                                     "type": "string",
                                     "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI)|VerificarMismoValor)\\(.+\\)[ ;]*$"
                                   },
@@ -447,7 +482,7 @@
                                   "height": {
                                     "type": "string"
                                   },
-                                  "pos": {
+                                  "position": {
                                     "type": "array",
                                     "items": {
                                       "anyOf": [
@@ -463,9 +498,9 @@
                                 },
                                 "required": [
                                   "id",
-                                  "obligatorio",
-                                  "placeholder",
-                                  "type"
+                                  "type",
+                                  "required",
+                                  "placeholder"
                                 ]
                               }
                             }
@@ -476,39 +511,34 @@
                           "properties": {
                             "type": {
                               "const": "tripleInputPhoto"
+                            }
+                            "labels": {
+                              "type": "array",
+                              "minItems": 3,
+                              "items": {
+                                "type": "string"
+                              }
                             },
-                            "acceptable": {
+                            "photoLabels": {
+                              "type": "array",
+                              "minItems": 3,
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "validRange": {
                               "type": "object",
-                              "additionalProperties": false,
                               "properties": {
-                                "max": {
-                                  "type": "string"
-                                },
                                 "min": {
-                                  "type": "string"
+                                  "type": "number"
+                                },
+                                "max": {
+                                  "type": "number"
                                 }
                               }
                             },
-                            "foto1Dsc": {
-                              "type": "string"
-                            },
-                            "foto2Dsc": {
-                              "type": "string"
-                            },
-                            "foto3Dsc": {
-                              "type": "string"
-                            },
-                            "input1Dsc": {
-                              "type": "string"
-                            },
-                            "input2Dsc": {
-                              "type": "string"
-                            },
-                            "input3Dsc": {
-                              "type": "string"
-                            },
                             "tolerancia": {
-                              "type": "string"
+                              "type": "number"
                             }
                           }
                         }

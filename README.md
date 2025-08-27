@@ -5,6 +5,6 @@ In particular schemas used to define SWAR processes.
 
 
 
-[Process Schema](schemas/v1.2.1/process.schema.json)
+[Process Schema](schemas/v1.2.3/process.schema.json)
 
 [Documentation](docs/README.md)
