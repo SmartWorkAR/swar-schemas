@@ -511,7 +511,7 @@
                           "properties": {
                             "type": {
                               "const": "tripleInputPhoto"
-                            }
+                            },
                             "labels": {
                               "type": "array",
                               "minItems": 3,
