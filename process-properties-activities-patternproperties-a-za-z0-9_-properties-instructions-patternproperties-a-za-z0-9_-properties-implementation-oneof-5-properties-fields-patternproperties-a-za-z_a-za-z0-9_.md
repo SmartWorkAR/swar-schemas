@@ -20,11 +20,11 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 | :-------------------------- | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [type](#type)               | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-type.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/type")               |
 | [options](#options)         | `array`   | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-options.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/options")         |
-| [required](#required)       | `boolean` | Required | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-required.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/required")       |
+| [required](#required)       | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-required.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/required")       |
 | [label](#label)             | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-label.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/label")             |
 | [check](#check)             | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-check.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/check")             |
-| [placeholder](#placeholder) | `string`  | Required | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-placeholder.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/placeholder") |
-| [origin](#origin)           | `number`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-origin.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/origin")           |
+| [placeholder](#placeholder) | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-placeholder.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/placeholder") |
+| [origin](#origin)           | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-origin.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/origin")           |
 | [width](#width)             | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-width.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/width")             |
 | [optionWidth](#optionwidth) | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-optionwidth.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/optionWidth") |
 | [default](#default)         | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-default.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/default")         |
@@ -72,7 +72,7 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 `required`
 
-* is required
+* is optional
 
 * Type: `boolean`
 
@@ -136,7 +136,7 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 `placeholder`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -156,7 +156,7 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 * is optional
 
-* Type: `number`
+* Type: `string`
 
 * cannot be null
 
@@ -164,7 +164,7 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 ### origin Type
 
-`number`
+`string`
 
 ## width
 

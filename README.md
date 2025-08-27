@@ -58,8 +58,6 @@
 
 * [Untitled object in SWAR Process Definition](./process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9.md) – `https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^[A-Za-z0-9_]+$/properties/instructions/patternProperties/^[A-Za-z0-9_]+$/properties/implementation/oneOf/9`
 
-* [Untitled object in SWAR Process Definition](./process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9-properties-validrange.md) – `https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^[A-Za-z0-9_]+$/properties/instructions/patternProperties/^[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/validRange`
-
 ### Arrays
 
 * [Untitled array in SWAR Process Definition](./process-properties-roles.md "Define which users categories can do the protocol and see its results") – `https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/roles`
@@ -87,6 +85,8 @@
 * [Untitled array in SWAR Process Definition](./process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9-properties-labels.md) – `https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^[A-Za-z0-9_]+$/properties/instructions/patternProperties/^[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/labels`
 
 * [Untitled array in SWAR Process Definition](./process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9-properties-photolabels.md) – `https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^[A-Za-z0-9_]+$/properties/instructions/patternProperties/^[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/photoLabels`
+
+* [Untitled array in SWAR Process Definition](./process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9-properties-validrange.md) – `https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^[A-Za-z0-9_]+$/properties/instructions/patternProperties/^[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/validRange`
 
 ## Version Note
 
