@@ -198,7 +198,7 @@
                                       "type": "string"
                                     },
                                     "origin": {
-                                      "type": "number"
+                                      "type": "string"
                                     },
                                     "width": {
                                       "type": "string"
@@ -301,7 +301,6 @@
                           },
                           "required": [
                             "type",
-                            "message",
                             "questions"
                           ]
                         },
@@ -376,7 +375,7 @@
                                       "type": "string"
                                     },
                                     "origin": {
-                                      "type": "number"
+                                      "type": "string"
                                     },
                                     "width": {
                                       "type": "string"
@@ -390,11 +389,7 @@
                                     "rowId": {
                                       "type": "string"
                                     }
-                                  },
-                                  "required": [
-                                    "required",
-                                    "placeholder"
-                                  ]
+                                  }
                                 }
                               }
                             },
@@ -527,18 +522,14 @@
                               }
                             },
                             "validRange": {
-                              "type": "object",
-                              "properties": {
-                                "min": {
-                                  "type": "number"
-                                },
-                                "max": {
-                                  "type": "number"
-                                }
-                              }
+                              "type": "array",
+                              "minItems": 2,
+                              "items": {
+                                "type": "string"
+                              } 
                             },
                             "tolerancia": {
-                              "type": "number"
+                              "type": "string"
                             }
                           }
                         }
