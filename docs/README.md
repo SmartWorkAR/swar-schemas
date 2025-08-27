@@ -997,4 +997,4 @@ Specific value: `"freeForm"`
 Specific value: `"tripleInputPhoto"`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-08-12 at 10:52:22 -0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-08-27 at 10:38:32 -0300
