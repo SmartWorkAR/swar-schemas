@@ -184,9 +184,6 @@
                                   "type": "object",
                                   "additionalProperties": false,
                                   "properties": {
-                                    "type": {
-                                      "type": "string"
-                                    },
                                     "required": {
                                       "type": "boolean"
                                     },
@@ -227,10 +224,15 @@
                                   },
                                   "required": [
                                     "required",
+                                    "check",
                                     "placeholder"
                                   ]
                                 }
-                              }
+                              },
+                              "required": [
+                                "type",
+                                "fields"
+                              ]
                             }
                           }
                         },
@@ -512,11 +514,7 @@
                         }
                       ]
                     }
-                  },
-                  "required": [
-                    "key",
-                    "implementation"
-                  ]
+                  }
                 }
               }
             }
