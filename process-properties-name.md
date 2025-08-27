@@ -1,10 +1,10 @@
 # Untitled string in SWAR Process Definition Schema
 
 ```txt
-https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/name
+https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/name
 ```
 
-The name of the process (a short description). This accepts variables from the InitialForm
+The name of the process (a short description). This accepts variables from the InitialForm.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |

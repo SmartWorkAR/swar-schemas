@@ -1,7 +1,7 @@
 # SWAR Process Definition Schema
 
 ```txt
-https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json
+https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json
 ```
 
 SWAR Version 1.2 process definition
@@ -18,17 +18,17 @@ SWAR Version 1.2 process definition
 
 | Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                                           |
 | :-------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [name](#name)               | `string` | Required | cannot be null | [SWAR Process Definition](process-properties-name.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/name")               |
-| [description](#description) | `string` | Optional | cannot be null | [SWAR Process Definition](process-properties-description.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/description") |
-| [title](#title)             | `string` | Optional | cannot be null | [SWAR Process Definition](process-properties-title.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/title")             |
-| [roles](#roles)             | `array`  | Optional | cannot be null | [SWAR Process Definition](process-properties-roles.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/roles")             |
-| [primaryKey](#primarykey)   | `array`  | Optional | cannot be null | [SWAR Process Definition](process-properties-primarykey.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/primaryKey")   |
-| [options](#options)         | `object` | Optional | cannot be null | [SWAR Process Definition](process-properties-options.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options")         |
-| [activities](#activities)   | `object` | Required | cannot be null | [SWAR Process Definition](process-properties-activities.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/activities")   |
+| [name](#name)               | `string` | Required | cannot be null | [SWAR Process Definition](process-properties-name.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/name")               |
+| [description](#description) | `string` | Optional | cannot be null | [SWAR Process Definition](process-properties-description.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/description") |
+| [title](#title)             | `string` | Optional | cannot be null | [SWAR Process Definition](process-properties-title.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/title")             |
+| [roles](#roles)             | `array`  | Required | cannot be null | [SWAR Process Definition](process-properties-roles.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/roles")             |
+| [primaryKey](#primarykey)   | `array`  | Optional | cannot be null | [SWAR Process Definition](process-properties-primarykey.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/primaryKey")   |
+| [options](#options)         | `object` | Optional | cannot be null | [SWAR Process Definition](process-properties-options.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options")         |
+| [activities](#activities)   | `object` | Required | cannot be null | [SWAR Process Definition](process-properties-activities.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities")   |
 
 ## name
 
-The name of the process (a short description). This accepts variables from the InitialForm
+The name of the process (a short description). This accepts variables from the InitialForm.
 
 `name`
 
@@ -38,7 +38,7 @@ The name of the process (a short description). This accepts variables from the I
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-name.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/name")
+* defined in: [SWAR Process Definition](process-properties-name.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/name")
 
 ### name Type
 
@@ -46,7 +46,7 @@ The name of the process (a short description). This accepts variables from the I
 
 ## description
 
-A detailed description of the process. This accepts variables from the InitialForm
+A detailed description of the process. This accepts variables from the InitialForm.
 
 `description`
 
@@ -56,7 +56,7 @@ A detailed description of the process. This accepts variables from the InitialFo
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-description.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/description")
+* defined in: [SWAR Process Definition](process-properties-description.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/description")
 
 ### description Type
 
@@ -64,7 +64,7 @@ A detailed description of the process. This accepts variables from the InitialFo
 
 ## title
 
-A one line description of the process (subject). This accepts variables from the InitialForm
+A one line description of the process (subject). This accepts variables from the InitialForm.
 
 `title`
 
@@ -74,7 +74,7 @@ A one line description of the process (subject). This accepts variables from the
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-title.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/title")
+* defined in: [SWAR Process Definition](process-properties-title.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/title")
 
 ### title Type
 
@@ -82,17 +82,17 @@ A one line description of the process (subject). This accepts variables from the
 
 ## roles
 
-Define which users categories can do the protocol and see its results
+Define which users categories can do the protocol and see its results.
 
 `roles`
 
-* is optional
+* is required
 
 * Type: `string[]`
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-roles.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/roles")
+* defined in: [SWAR Process Definition](process-properties-roles.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/roles")
 
 ### roles Type
 
@@ -100,7 +100,7 @@ Define which users categories can do the protocol and see its results
 
 ## primaryKey
 
-Define with input parameter fields are considered a primary key of a process instance.
+Define which input parameter fields are considered a primary key of a process instance.
 
 `primaryKey`
 
@@ -110,7 +110,7 @@ Define with input parameter fields are considered a primary key of a process ins
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-primarykey.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/primaryKey")
+* defined in: [SWAR Process Definition](process-properties-primarykey.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/primaryKey")
 
 ### primaryKey Type
 
@@ -118,7 +118,7 @@ Define with input parameter fields are considered a primary key of a process ins
 
 ## options
 
-Additional ad hoc properties
+Additional ad hoc properties.
 
 `options`
 
@@ -128,7 +128,7 @@ Additional ad hoc properties
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-options.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options")
+* defined in: [SWAR Process Definition](process-properties-options.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options")
 
 ### options Type
 
@@ -136,7 +136,7 @@ Additional ad hoc properties
 
 ## activities
 
-The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}
+The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}.
 
 `activities`
 
@@ -146,8 +146,12 @@ The activities of the process. Entries with the format: {activity1: { Data for t
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-activities.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/activities")
+* defined in: [SWAR Process Definition](process-properties-activities.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities")
 
 ### activities Type
 
 `object` ([Details](process-properties-activities.md))
+
+### activities Constraints
+
+**minimum number of properties**: the minimum number of properties for this object is: `2`

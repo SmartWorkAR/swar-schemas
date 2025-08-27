@@ -1,10 +1,10 @@
 # Untitled object in SWAR Process Definition Schema
 
 ```txt
-https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options
+https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options
 ```
 
-Additional ad hoc properties
+Additional ad hoc properties.
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |
@@ -18,11 +18,11 @@ Additional ad hoc properties
 
 | Property                                           | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                     |
 | :------------------------------------------------- | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [showQr](#showqr)                                  | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-showqr.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/showQr")                               |
-| [canEditOnFinish](#caneditonfinish)                | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-caneditonfinish.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/canEditOnFinish")             |
-| [canUploadBeforeFinish](#canuploadbeforefinish)    | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-canuploadbeforefinish.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/canUploadBeforeFinish") |
-| [mission\_can\_be\_shared](#mission_can_be_shared) | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-mission_can_be_shared.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/mission_can_be_shared") |
-| [canCreateOnDevice](#cancreateondevice)            | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-cancreateondevice.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/canCreateOnDevice")         |
+| [showQr](#showqr)                                  | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-showqr.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/showQr")                               |
+| [canEditOnFinish](#caneditonfinish)                | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-caneditonfinish.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/canEditOnFinish")             |
+| [canUploadBeforeFinish](#canuploadbeforefinish)    | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-canuploadbeforefinish.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/canUploadBeforeFinish") |
+| [mission\_can\_be\_shared](#mission_can_be_shared) | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-mission_can_be_shared.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/mission_can_be_shared") |
+| [canCreateOnDevice](#cancreateondevice)            | `boolean` | Optional | cannot be null | [SWAR Process Definition](process-properties-options-properties-cancreateondevice.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/canCreateOnDevice")         |
 
 ## showQr
 
@@ -36,7 +36,7 @@ The mission can be initiated from a device using a QR code.
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-options-properties-showqr.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/showQr")
+* defined in: [SWAR Process Definition](process-properties-options-properties-showqr.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/showQr")
 
 ### showQr Type
 
@@ -54,7 +54,7 @@ After completing a mission, it can be modified.
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-options-properties-caneditonfinish.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/canEditOnFinish")
+* defined in: [SWAR Process Definition](process-properties-options-properties-caneditonfinish.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/canEditOnFinish")
 
 ### canEditOnFinish Type
 
@@ -72,7 +72,7 @@ The mission can be partially uploaded to the server.
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-options-properties-canuploadbeforefinish.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/canUploadBeforeFinish")
+* defined in: [SWAR Process Definition](process-properties-options-properties-canuploadbeforefinish.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/canUploadBeforeFinish")
 
 ### canUploadBeforeFinish Type
 
@@ -90,7 +90,7 @@ If a mission was created locally, it can be shared between users of the same cat
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-options-properties-mission_can_be_shared.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/mission_can_be_shared")
+* defined in: [SWAR Process Definition](process-properties-options-properties-mission_can_be_shared.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/mission_can_be_shared")
 
 ### mission\_can\_be\_shared Type
 
@@ -98,7 +98,7 @@ If a mission was created locally, it can be shared between users of the same cat
 
 ## canCreateOnDevice
 
-The mission can be created from the device. Default true
+The mission can be created from the device. Default true.
 
 `canCreateOnDevice`
 
@@ -108,7 +108,7 @@ The mission can be created from the device. Default true
 
 * cannot be null
 
-* defined in: [SWAR Process Definition](process-properties-options-properties-cancreateondevice.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.1/process.schema.json#/properties/options/properties/canCreateOnDevice")
+* defined in: [SWAR Process Definition](process-properties-options-properties-cancreateondevice.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/options/properties/canCreateOnDevice")
 
 ### canCreateOnDevice Type
 
