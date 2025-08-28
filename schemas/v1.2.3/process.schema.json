@@ -450,10 +450,8 @@
                               "type": "string"
                             },
                             "fields": {
-                              "type": "object",
-                              "additionalProperties": {
-                                "type": "object",
-                                "additionalProperties": false,
+                              "type": "array",
+                              "items": {
                                 "properties": {
                                   "id": {
                                     "type": "string"
@@ -490,14 +488,14 @@
                                       ]
                                     }
                                   }
-                                },
-                                "required": [
-                                  "id",
-                                  "type",
-                                  "required",
-                                  "placeholder"
-                                ]
-                              }
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "type",
+                                "required",
+                                "placeholder"
+                              ]
                             }
                           }
                         },
@@ -526,7 +524,7 @@
                               "minItems": 2,
                               "items": {
                                 "type": "string"
-                              } 
+                              }
                             },
                             "tolerancia": {
                               "type": "string"
