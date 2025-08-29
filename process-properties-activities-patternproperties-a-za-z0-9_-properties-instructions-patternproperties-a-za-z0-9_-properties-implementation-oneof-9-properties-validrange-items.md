@@ -1,4 +1,4 @@
-# Untitled string in SWAR Process Definition Schema
+# Untitled number in SWAR Process Definition Schema
 
 ```txt
 https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^[A-Za-z0-9_]+$/properties/instructions/patternProperties/^[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/validRange/items
@@ -12,4 +12,4 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 ## items Type
 
-`string`
+`number`

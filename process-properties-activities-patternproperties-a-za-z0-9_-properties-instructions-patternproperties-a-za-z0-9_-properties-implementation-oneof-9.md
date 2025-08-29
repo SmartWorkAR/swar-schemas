@@ -22,7 +22,7 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 | [labels](#labels)           | `array`       | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9-properties-labels.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/labels")           |
 | [photoLabels](#photolabels) | `array`       | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9-properties-photolabels.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/photoLabels") |
 | [validRange](#validrange)   | `array`       | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9-properties-validrange.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/validRange")   |
-| [tolerancia](#tolerancia)   | `string`      | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9-properties-tolerancia.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/tolerancia")   |
+| [tolerancia](#tolerancia)   | `integer`     | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-9-properties-tolerancia.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/9/properties/tolerancia")   |
 
 ## type
 
@@ -102,7 +102,7 @@ unknown
 
 * is optional
 
-* Type: `string[]`
+* Type: `number[]`
 
 * cannot be null
 
@@ -110,7 +110,7 @@ unknown
 
 ### validRange Type
 
-`string[]`
+`number[]`
 
 ### validRange Constraints
 
@@ -124,7 +124,7 @@ unknown
 
 * is optional
 
-* Type: `string`
+* Type: `integer`
 
 * cannot be null
 
@@ -132,4 +132,4 @@ unknown
 
 ### tolerancia Type
 
-`string`
+`integer`

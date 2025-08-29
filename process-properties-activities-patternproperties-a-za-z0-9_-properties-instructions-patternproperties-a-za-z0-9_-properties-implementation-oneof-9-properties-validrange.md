@@ -12,7 +12,7 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 ## validRange Type
 
-`string[]`
+`number[]`
 
 ## validRange Constraints
 
