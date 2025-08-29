@@ -523,11 +523,11 @@
                               "type": "array",
                               "minItems": 2,
                               "items": {
-                                "type": "string"
+                                "type": "number"
                               }
                             },
                             "tolerancia": {
-                              "type": "string"
+                              "type": "integer"
                             }
                           }
                         }
