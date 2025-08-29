@@ -48,6 +48,15 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 `string`
 
+### type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value      | Explanation |
+| :--------- | :---------- |
+| `"choice"` |             |
+| `"out"`    |             |
+
 ## options
 
 
