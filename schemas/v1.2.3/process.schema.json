@@ -353,7 +353,11 @@
                                   "additionalProperties": false,
                                   "properties": {
                                     "type": {
-                                      "type": "string"
+                                      "type": "string",
+                                      "enum": [
+                                        "choice",
+                                        "out"
+                                      ]
                                     },
                                     "options": {
                                       "type": "array",
