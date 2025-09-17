@@ -412,8 +412,7 @@
                           },
                           "required": [
                             "type",
-                            "fields",
-                            "expressions"
+                            "fields"
                           ]
                         },
                         {
