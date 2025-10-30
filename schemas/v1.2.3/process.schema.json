@@ -360,7 +360,8 @@
                                         "image",
                                         "photo",
                                         "video",
-                                        "formFree"
+                                        "formFree",
+                                        "background"
                                       ]
                                     },
                                     "options": {
@@ -396,6 +397,12 @@
                                     },
                                     "rowId": {
                                       "type": "string"
+                                    },
+                                    "height": {
+                                      "type": "string"
+                                    },
+                                    "y0": {
+                                      "type": "string"
                                     }
                                   }
                                 }
@@ -424,6 +431,9 @@
                           "properties": {
                             "type": {
                               "const": "approvalRequestPoint"
+                            },
+                            "when": {
+                              "type": "string"
                             }
                           },
                           "required": [
@@ -454,6 +464,9 @@
                               "const": "freeForm"
                             },
                             "image": {
+                              "type": "string"
+                            },
+                            "when": {
                               "type": "string"
                             },
                             "fields": {
