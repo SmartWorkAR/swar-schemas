@@ -29,6 +29,8 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 | [optionWidth](#optionwidth) | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-optionwidth.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/optionWidth") |
 | [default](#default)         | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-default.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/default")         |
 | [rowId](#rowid)             | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-rowid.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/rowId")             |
+| [height](#height)           | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-height.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/height")           |
+| [y0](#y0)                   | `string`  | Optional | cannot be null | [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-y0.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/y0")                   |
 
 ## type
 
@@ -52,14 +54,15 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value        | Explanation |
-| :----------- | :---------- |
-| `"choice"`   |             |
-| `"out"`      |             |
-| `"image"`    |             |
-| `"photo"`    |             |
-| `"video"`    |             |
-| `"formFree"` |             |
+| Value          | Explanation |
+| :------------- | :---------- |
+| `"choice"`     |             |
+| `"out"`        |             |
+| `"image"`      |             |
+| `"photo"`      |             |
+| `"video"`      |             |
+| `"formFree"`   |             |
+| `"background"` |             |
 
 ## options
 
@@ -248,5 +251,41 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 * defined in: [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-rowid.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/rowId")
 
 ### rowId Type
+
+`string`
+
+## height
+
+
+
+`height`
+
+* is optional
+
+* Type: `string`
+
+* cannot be null
+
+* defined in: [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-height.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/height")
+
+### height Type
+
+`string`
+
+## y0
+
+
+
+`y0`
+
+* is optional
+
+* Type: `string`
+
+* cannot be null
+
+* defined in: [SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-5-properties-fields-patternproperties-a-za-z_a-za-z0-9_-properties-y0.md "https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^\[A-Za-z0-9_]+$/properties/instructions/patternProperties/^\[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^\[a-zA-Z_]\[a-zA-Z0-9_]*$/properties/y0")
+
+### y0 Type
 
 `string`
