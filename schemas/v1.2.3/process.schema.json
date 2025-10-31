@@ -398,11 +398,23 @@
                                     "rowId": {
                                       "type": "string"
                                     },
+                                    "noLabelOnInput": {
+                                      "type": "boolean"
+                                    },
                                     "height": {
-                                      "type": "string"
+                                      "type": "number"
                                     },
                                     "y0": {
-                                      "type": "string"
+                                      "type": "number"
+                                    },
+                                    "size": {
+                                      "type": "integer"
+                                    },
+                                    "duration": {
+                                      "type": "integer"
+                                    },
+                                    "quality": {
+                                      "type": "integer"
                                     }
                                   }
                                 }
