@@ -1,4 +1,4 @@
-# Untitled string in SWAR Process Definition Schema
+# Untitled number in SWAR Process Definition Schema
 
 ```txt
 https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^[A-Za-z0-9_]+$/properties/instructions/patternProperties/^[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^[a-zA-Z_][a-zA-Z0-9_]*$/properties/height
@@ -12,4 +12,4 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 ## height Type
 
-`string`
+`number`

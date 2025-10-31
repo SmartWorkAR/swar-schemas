@@ -1,7 +1,7 @@
-# Untitled number in SWAR Process Definition Schema
+# Untitled integer in SWAR Process Definition Schema
 
 ```txt
-https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^[A-Za-z0-9_]+$/properties/instructions/patternProperties/^[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^[a-zA-Z_][a-zA-Z0-9_]*$/properties/y0
+https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/properties/activities/patternProperties/^[A-Za-z0-9_]+$/properties/instructions/patternProperties/^[A-Za-z0-9_]+$/properties/implementation/oneOf/5/properties/fields/patternProperties/^[a-zA-Z_][a-zA-Z0-9_]*$/properties/quality
 ```
 
 
@@ -10,6 +10,6 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [process.schema.json\*](../out/process.schema.json "open original schema") |
 
-## y0 Type
+## quality Type
 
-`number`
+`integer`
