@@ -12,10 +12,10 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 ## items Type
 
-merged type ([Details](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-8-properties-fields-items-properties-position-items.md))
+merged type ([Details](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-free-form-implementation-properties-fields-items-properties-position-items.md))
 
 any of
 
-* [Untitled number in SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-8-properties-fields-items-properties-position-items-anyof-0.md "check type definition")
+* [Untitled number in SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-free-form-implementation-properties-fields-items-properties-position-items-anyof-0.md "check type definition")
 
-* [Untitled string in SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-8-properties-fields-items-properties-position-items-anyof-1.md "check type definition")
+* [Untitled string in SWAR Process Definition](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-free-form-implementation-properties-fields-items-properties-position-items-anyof-1.md "check type definition")

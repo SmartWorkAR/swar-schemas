@@ -12,4 +12,4 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 
 ## position Type
 
-an array of merged types ([Details](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-8-properties-fields-items-properties-position-items.md))
+an array of merged types ([Details](process-properties-activities-patternproperties-a-za-z0-9_-properties-instructions-patternproperties-a-za-z0-9_-properties-implementation-oneof-free-form-implementation-properties-fields-items-properties-position-items.md))
