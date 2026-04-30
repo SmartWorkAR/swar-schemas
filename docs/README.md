@@ -28,61 +28,117 @@
         - [7.2.2.1.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > goal`](#activities_pattern1_instructions_pattern1_goal)
           - [7.2.2.1.6.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > goal > goal items](#activities_pattern1_instructions_pattern1_goal_items)
         - [7.2.2.1.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > values`](#activities_pattern1_instructions_pattern1_values)
-          - [7.2.2.1.7.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > values > additionalProperties`](#activities_pattern1_instructions_pattern1_values_additionalProperties)
+          - [7.2.2.1.7.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > values > right`](#activities_pattern1_instructions_pattern1_values_right)
+          - [7.2.2.1.7.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > values > wrong`](#activities_pattern1_instructions_pattern1_values_wrong)
         - [7.2.2.1.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > subject`](#activities_pattern1_instructions_pattern1_subject)
           - [7.2.2.1.8.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > subject > subject items](#activities_pattern1_instructions_pattern1_subject_items)
-        - [7.2.2.1.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > type`](#activities_pattern1_instructions_pattern1_type)
-        - [7.2.2.1.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation`](#activities_pattern1_instructions_pattern1_implementation)
-          - [7.2.2.1.10.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0)
-            - [7.2.2.1.10.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_type)
-            - [7.2.2.1.10.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > title`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_title)
-            - [7.2.2.1.10.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > key`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_key)
-            - [7.2.2.1.10.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields)
-              - [7.2.2.1.10.1.4.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties)
-                - [7.2.2.1.10.1.4.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_type)
-                - [7.2.2.1.10.1.4.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > required`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_required)
-                - [7.2.2.1.10.1.4.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > check`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_check)
-                - [7.2.2.1.10.1.4.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > placeholder`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_placeholder)
-                - [7.2.2.1.10.1.4.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > width`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_width)
-                - [7.2.2.1.10.1.4.1.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > origin`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_origin)
-                - [7.2.2.1.10.1.4.1.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > default`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_default)
-                - [7.2.2.1.10.1.4.1.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > rowId`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_rowId)
-          - [7.2.2.1.10.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 1`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1)
-            - [7.2.2.1.10.2.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 1 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_type)
-            - [7.2.2.1.10.2.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 1 > photos`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos)
-              - [7.2.2.1.10.2.2.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 1 > photos > additionalProperties`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos_additionalProperties)
-          - [7.2.2.1.10.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 2`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2)
-            - [7.2.2.1.10.3.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 2 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_type)
-            - [7.2.2.1.10.3.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 2 > description`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_description)
-            - [7.2.2.1.10.3.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 2 > quality`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_quality)
-          - [7.2.2.1.10.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3)
-            - [7.2.2.1.10.4.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_type)
-            - [7.2.2.1.10.4.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > message`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_message)
-            - [7.2.2.1.10.4.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions)
-              - [7.2.2.1.10.4.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items)
-                - [7.2.2.1.10.4.3.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > id`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_id)
-                - [7.2.2.1.10.4.3.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > text`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_text)
-                - [7.2.2.1.10.4.3.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > answers`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers)
-                  - [7.2.2.1.10.4.3.1.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > answers > answers items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers_items)
-                - [7.2.2.1.10.4.3.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > default`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_default)
-                - [7.2.2.1.10.4.3.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > height`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_height)
-          - [7.2.2.1.10.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4)
-            - [7.2.2.1.10.5.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_type)
-            - [7.2.2.1.10.5.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > description`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_description)
-            - [7.2.2.1.10.5.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > labels`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels)
-              - [7.2.2.1.10.5.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > labels > labels items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels_items)
-            - [7.2.2.1.10.5.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > referenceValue`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_referenceValue)
-            - [7.2.2.1.10.5.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > tolerance`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_tolerance)
-          - [7.2.2.1.10.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 5`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5)
-            - [7.2.2.1.10.6.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 5 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_type)
-          - [7.2.2.1.10.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 6`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6)
-            - [7.2.2.1.10.7.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 6 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6_type)
-          - [7.2.2.1.10.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 7`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i7)
-            - [7.2.2.1.10.8.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 7 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i7_type)
-          - [7.2.2.1.10.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 8`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8)
-            - [7.2.2.1.10.9.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 8 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_type)
-          - [7.2.2.1.10.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 9`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9)
-            - [7.2.2.1.10.10.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 9 > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_type)
+        - [7.2.2.1.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Instruction_Imagen`](#activities_pattern1_instructions_pattern1_Instruction_Imagen)
+        - [7.2.2.1.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Instruction_XXX`](#activities_pattern1_instructions_pattern1_Instruction_XXX)
+        - [7.2.2.1.11. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Instruction_id`](#activities_pattern1_instructions_pattern1_Instruction_id)
+        - [7.2.2.1.12. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Instruction_text`](#activities_pattern1_instructions_pattern1_Instruction_text)
+        - [7.2.2.1.13. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Material adicional 1`](#activities_pattern1_instructions_pattern1_Material_adicional_1)
+        - [7.2.2.1.14. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Material adicional 2`](#activities_pattern1_instructions_pattern1_Material_adicional_2)
+        - [7.2.2.1.15. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Material adicional 3`](#activities_pattern1_instructions_pattern1_Material_adicional_3)
+        - [7.2.2.1.16. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > type`](#activities_pattern1_instructions_pattern1_type)
+        - [7.2.2.1.17. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation`](#activities_pattern1_instructions_pattern1_implementation)
+          - [7.2.2.1.17.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0)
+            - [7.2.2.1.17.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_type)
+            - [7.2.2.1.17.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > title`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_title)
+            - [7.2.2.1.17.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > key`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_key)
+            - [7.2.2.1.17.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields)
+              - [7.2.2.1.17.1.4.1. Pattern Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1)
+                - [7.2.2.1.17.1.4.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_type)
+                - [7.2.2.1.17.1.4.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > required`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_required)
+                - [7.2.2.1.17.1.4.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > check`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_check)
+                - [7.2.2.1.17.1.4.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > placeholder`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_placeholder)
+                - [7.2.2.1.17.1.4.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > origin`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_origin)
+                - [7.2.2.1.17.1.4.1.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > width`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_width)
+                - [7.2.2.1.17.1.4.1.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > default`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_default)
+                - [7.2.2.1.17.1.4.1.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > rowId`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_rowId)
+          - [7.2.2.1.17.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Photos Implementation`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1)
+            - [7.2.2.1.17.2.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Photos Implementation > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_type)
+            - [7.2.2.1.17.2.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Photos Implementation > photos`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos)
+              - [7.2.2.1.17.2.2.1. Pattern Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Photos Implementation > photos > ^[a-zA-Z_][a-zA-Z0-9_]*$`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos_pattern1)
+          - [7.2.2.1.17.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Video Implementation`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2)
+            - [7.2.2.1.17.3.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Video Implementation > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_type)
+            - [7.2.2.1.17.3.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Video Implementation > description`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_description)
+            - [7.2.2.1.17.3.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Video Implementation > quality`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_quality)
+          - [7.2.2.1.17.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3)
+            - [7.2.2.1.17.4.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_type)
+            - [7.2.2.1.17.4.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > message`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_message)
+            - [7.2.2.1.17.4.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions)
+              - [7.2.2.1.17.4.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items)
+                - [7.2.2.1.17.4.3.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > id`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_id)
+                - [7.2.2.1.17.4.3.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > text`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_text)
+                - [7.2.2.1.17.4.3.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > answers`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers)
+                  - [7.2.2.1.17.4.3.1.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > answers > answers items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers_items)
+                - [7.2.2.1.17.4.3.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > default`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_default)
+                - [7.2.2.1.17.4.3.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > height`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_height)
+          - [7.2.2.1.17.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4)
+            - [7.2.2.1.17.5.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_type)
+            - [7.2.2.1.17.5.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > description`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_description)
+            - [7.2.2.1.17.5.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > labels`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels)
+              - [7.2.2.1.17.5.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > labels > labels items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels_items)
+            - [7.2.2.1.17.5.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > referenceValue`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_referenceValue)
+            - [7.2.2.1.17.5.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > tolerance`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_tolerance)
+          - [7.2.2.1.17.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5)
+            - [7.2.2.1.17.6.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_type)
+            - [7.2.2.1.17.6.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > title`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_title)
+            - [7.2.2.1.17.6.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields)
+              - [7.2.2.1.17.6.3.1. Pattern Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1)
+                - [7.2.2.1.17.6.3.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_type)
+                - [7.2.2.1.17.6.3.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > options`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_options)
+                  - [7.2.2.1.17.6.3.1.2.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > options > options items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_options_items)
+                - [7.2.2.1.17.6.3.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > required`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_required)
+                - [7.2.2.1.17.6.3.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > label`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_label)
+                - [7.2.2.1.17.6.3.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > check`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_check)
+                - [7.2.2.1.17.6.3.1.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > placeholder`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_placeholder)
+                - [7.2.2.1.17.6.3.1.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > origin`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_origin)
+                - [7.2.2.1.17.6.3.1.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > width`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_width)
+                - [7.2.2.1.17.6.3.1.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > optionWidth`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_optionWidth)
+                - [7.2.2.1.17.6.3.1.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > default`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_default)
+                - [7.2.2.1.17.6.3.1.11. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > rowId`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_rowId)
+                - [7.2.2.1.17.6.3.1.12. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > noLabelOnInput`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_noLabelOnInput)
+                - [7.2.2.1.17.6.3.1.13. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > height`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_height)
+                - [7.2.2.1.17.6.3.1.14. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > y0`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_y0)
+                - [7.2.2.1.17.6.3.1.15. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > size`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_size)
+                - [7.2.2.1.17.6.3.1.16. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > duration`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_duration)
+                - [7.2.2.1.17.6.3.1.17. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > quality`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_quality)
+            - [7.2.2.1.17.6.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > expressions`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_expressions)
+              - [7.2.2.1.17.6.4.1. Pattern Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > expressions > ^[a-zA-Z_][a-zA-Z0-9_]*_(valid\|enabled\|visible)$`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_expressions_pattern1)
+                - [7.2.2.1.17.6.4.1.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > expressions > ^[a-zA-Z_][a-zA-Z0-9_]*_(valid\|enabled\|visible)$ > ^[a-zA-Z_][a-zA-Z0-9_]*_(valid\|enabled\|visible)$ items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_expressions_pattern1_items)
+          - [7.2.2.1.17.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Approval Request Point`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6)
+            - [7.2.2.1.17.7.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Approval Request Point > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6_type)
+            - [7.2.2.1.17.7.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Approval Request Point > when`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6_when)
+          - [7.2.2.1.17.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Check Tolerance`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i7)
+            - [7.2.2.1.17.8.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Check Tolerance > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i7_type)
+          - [7.2.2.1.17.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8)
+            - [7.2.2.1.17.9.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_type)
+            - [7.2.2.1.17.9.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > image`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_image)
+            - [7.2.2.1.17.9.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > when`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_when)
+            - [7.2.2.1.17.9.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields)
+              - [7.2.2.1.17.9.4.1. The following properties are required](#autogenerated_heading_3)
+              - [7.2.2.1.17.9.4.2. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items)
+                - [7.2.2.1.17.9.4.2.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > id`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_id)
+                - [7.2.2.1.17.9.4.2.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_type)
+                - [7.2.2.1.17.9.4.2.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > required`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_required)
+                - [7.2.2.1.17.9.4.2.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > check`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_check)
+                - [7.2.2.1.17.9.4.2.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > placeholder`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_placeholder)
+                - [7.2.2.1.17.9.4.2.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > width`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_width)
+                - [7.2.2.1.17.9.4.2.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > height`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_height)
+                - [7.2.2.1.17.9.4.2.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > position`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position)
+                  - [7.2.2.1.17.9.4.2.8.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > position > position items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position_items)
+                    - [7.2.2.1.17.9.4.2.8.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > position > position items > anyOf > item 0`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position_items_anyOf_i0)
+                    - [7.2.2.1.17.9.4.2.8.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > position > position items > anyOf > item 1`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position_items_anyOf_i1)
+          - [7.2.2.1.17.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9)
+            - [7.2.2.1.17.10.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > type`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_type)
+            - [7.2.2.1.17.10.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > labels`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_labels)
+              - [7.2.2.1.17.10.2.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > labels > labels items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_labels_items)
+            - [7.2.2.1.17.10.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > photoLabels`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_photoLabels)
+              - [7.2.2.1.17.10.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > photoLabels > photoLabels items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_photoLabels_items)
+            - [7.2.2.1.17.10.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > validRange`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_validRange)
+              - [7.2.2.1.17.10.4.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > validRange > validRange items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_validRange_items)
+            - [7.2.2.1.17.10.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > tolerancia`](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_tolerancia)
 
 **Title:** SWAR Process Definition
 
@@ -100,7 +156,7 @@
 | - [description](#description ) | No      | string          | No         | -          | A detailed description of the process. This accepts variables from the InitialForm.                 |
 | - [title](#title )             | No      | string          | No         | -          | A one line description of the process (subject). This accepts variables from the InitialForm.       |
 | + [roles](#roles )             | No      | array of string | No         | -          | Define which users categories can do the protocol and see its results.                              |
-| - [primaryKey](#primaryKey )   | No      | array of string | No         | -          | Define with input parameter fields are considered a primary key of a process instance.              |
+| - [primaryKey](#primaryKey )   | No      | array of string | No         | -          | Define which input parameter fields are considered a primary key of a process instance.             |
 | - [options](#options )         | No      | object          | No         | -          | Additional ad hoc properties.                                                                       |
 | + [activities](#activities )   | No      | object          | No         | -          | The activities of the process. Entries with the format: {activity1: { Data for the activity}, ...}. |
 
@@ -166,7 +222,7 @@
 | **Type**     | `array of string` |
 | **Required** | No                |
 
-**Description:** Define with input parameter fields are considered a primary key of a process instance.
+**Description:** Define which input parameter fields are considered a primary key of a process instance.
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -317,18 +373,25 @@ must respect the following conditions
 | **Required**              | No          |
 | **Additional properties** | Not allowed |
 
-| Property                                                                       | Pattern | Type            | Deprecated | Definition | Title/Description                                                                   |
-| ------------------------------------------------------------------------------ | ------- | --------------- | ---------- | ---------- | ----------------------------------------------------------------------------------- |
-| - [id](#activities_pattern1_instructions_pattern1_id )                         | No      | string          | No         | -          | The id of the instruction.                                                          |
-| - [description](#activities_pattern1_instructions_pattern1_description )       | No      | string          | No         | -          | A description of the instruction.                                                   |
-| - [image](#activities_pattern1_instructions_pattern1_image )                   | No      | string          | No         | -          | A image associated with the instruction.                                            |
-| - [attachments](#activities_pattern1_instructions_pattern1_attachments )       | No      | array of string | No         | -          | Documents attached to the current instruction, to be used as support documentation. |
-| - [key](#activities_pattern1_instructions_pattern1_key )                       | No      | string          | No         | -          | -                                                                                   |
-| - [goal](#activities_pattern1_instructions_pattern1_goal )                     | No      | array of string | No         | -          | -                                                                                   |
-| - [values](#activities_pattern1_instructions_pattern1_values )                 | No      | object          | No         | -          | -                                                                                   |
-| - [subject](#activities_pattern1_instructions_pattern1_subject )               | No      | array of string | No         | -          | -                                                                                   |
-| - [type](#activities_pattern1_instructions_pattern1_type )                     | No      | string          | No         | -          | -                                                                                   |
-| - [implementation](#activities_pattern1_instructions_pattern1_implementation ) | No      | Combination     | No         | -          | How the Instruction is implemented: form, photos, video, etc.                       |
+| Property                                                                                   | Pattern | Type            | Deprecated | Definition | Title/Description                                                                   |
+| ------------------------------------------------------------------------------------------ | ------- | --------------- | ---------- | ---------- | ----------------------------------------------------------------------------------- |
+| - [id](#activities_pattern1_instructions_pattern1_id )                                     | No      | string          | No         | -          | The id of the instruction.                                                          |
+| - [description](#activities_pattern1_instructions_pattern1_description )                   | No      | string          | No         | -          | A description of the instruction.                                                   |
+| - [image](#activities_pattern1_instructions_pattern1_image )                               | No      | string          | No         | -          | A image associated with the instruction.                                            |
+| - [attachments](#activities_pattern1_instructions_pattern1_attachments )                   | No      | array of string | No         | -          | Documents attached to the current instruction, to be used as support documentation. |
+| - [key](#activities_pattern1_instructions_pattern1_key )                                   | No      | string          | No         | -          | -                                                                                   |
+| - [goal](#activities_pattern1_instructions_pattern1_goal )                                 | No      | array of string | No         | -          | -                                                                                   |
+| - [values](#activities_pattern1_instructions_pattern1_values )                             | No      | object          | No         | -          | -                                                                                   |
+| - [subject](#activities_pattern1_instructions_pattern1_subject )                           | No      | array of string | No         | -          | -                                                                                   |
+| - [Instruction_Imagen](#activities_pattern1_instructions_pattern1_Instruction_Imagen )     | No      | string          | No         | -          | -                                                                                   |
+| - [Instruction_XXX](#activities_pattern1_instructions_pattern1_Instruction_XXX )           | No      | string          | No         | -          | -                                                                                   |
+| - [Instruction_id](#activities_pattern1_instructions_pattern1_Instruction_id )             | No      | string          | No         | -          | -                                                                                   |
+| - [Instruction_text](#activities_pattern1_instructions_pattern1_Instruction_text )         | No      | string          | No         | -          | -                                                                                   |
+| - [Material adicional 1](#activities_pattern1_instructions_pattern1_Material_adicional_1 ) | No      | string          | No         | -          | -                                                                                   |
+| - [Material adicional 2](#activities_pattern1_instructions_pattern1_Material_adicional_2 ) | No      | string          | No         | -          | -                                                                                   |
+| - [Material adicional 3](#activities_pattern1_instructions_pattern1_Material_adicional_3 ) | No      | string          | No         | -          | -                                                                                   |
+| - [type](#activities_pattern1_instructions_pattern1_type )                                 | No      | string          | No         | -          | -                                                                                   |
+| - [implementation](#activities_pattern1_instructions_pattern1_implementation )             | No      | Combination     | No         | -          | How the Instruction is implemented: form, photos, video, etc.                       |
 
 ###### <a name="activities_pattern1_instructions_pattern1_id"></a>7.2.2.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > id`
 
@@ -420,17 +483,25 @@ must respect the following conditions
 
 ###### <a name="activities_pattern1_instructions_pattern1_values"></a>7.2.2.1.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > values`
 
-|                           |                                                                                                                               |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                      |
-| **Required**              | No                                                                                                                            |
-| **Additional properties** | [Each additional property must conform to the schema](#activities_pattern1_instructions_pattern1_values_additionalProperties) |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
-| Property                                                                      | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ----------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [](#activities_pattern1_instructions_pattern1_values_additionalProperties ) | No      | string | No         | -          | -                 |
+| Property                                                            | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [right](#activities_pattern1_instructions_pattern1_values_right ) | No      | string | No         | -          | -                 |
+| - [wrong](#activities_pattern1_instructions_pattern1_values_wrong ) | No      | string | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_values_additionalProperties"></a>7.2.2.1.7.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > values > additionalProperties`
+###### <a name="activities_pattern1_instructions_pattern1_values_right"></a>7.2.2.1.7.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > values > right`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_values_wrong"></a>7.2.2.1.7.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > values > wrong`
 
 |              |          |
 | ------------ | -------- |
@@ -463,14 +534,63 @@ must respect the following conditions
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_type"></a>7.2.2.1.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > type`
+###### <a name="activities_pattern1_instructions_pattern1_Instruction_Imagen"></a>7.2.2.1.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Instruction_Imagen`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation"></a>7.2.2.1.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation`
+###### <a name="activities_pattern1_instructions_pattern1_Instruction_XXX"></a>7.2.2.1.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Instruction_XXX`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_Instruction_id"></a>7.2.2.1.11. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Instruction_id`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_Instruction_text"></a>7.2.2.1.12. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Instruction_text`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_Material_adicional_1"></a>7.2.2.1.13. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Material adicional 1`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_Material_adicional_2"></a>7.2.2.1.14. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Material adicional 2`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_Material_adicional_3"></a>7.2.2.1.15. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > Material adicional 3`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_type"></a>7.2.2.1.16. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > type`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation"></a>7.2.2.1.17. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -480,26 +600,30 @@ must respect the following conditions
 
 **Description:** How the Instruction is implemented: form, photos, video, etc.
 
-| One of(Option)                                                               |
-| ---------------------------------------------------------------------------- |
-| [item 0](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0) |
-| [item 1](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1) |
-| [item 2](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2) |
-| [item 3](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3) |
-| [item 4](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4) |
-| [item 5](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5) |
-| [item 6](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6) |
-| [item 7](#activities_pattern1_instructions_pattern1_implementation_oneOf_i7) |
-| [item 8](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8) |
-| [item 9](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9) |
+| One of(Option)                                                                                       |
+| ---------------------------------------------------------------------------------------------------- |
+| [Form Implementation](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0)            |
+| [Photos Implementation](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1)          |
+| [Video Implementation](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2)           |
+| [Multiple Choice Implementation](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3) |
+| [Double Input Implementation](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4)    |
+| [Form2 Implementation](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5)           |
+| [Approval Request Point](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6)         |
+| [Check Tolerance](#activities_pattern1_instructions_pattern1_implementation_oneOf_i7)                |
+| [Free Form Implementation](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8)       |
+| [Triple Input Photo](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9)             |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0"></a>7.2.2.1.10.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0"></a>7.2.2.1.17.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation`
+
+**Title:** Form Implementation
 
 |                           |                  |
 | ------------------------- | ---------------- |
 | **Type**                  | `object`         |
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
+
+**Description:** Formulario con campos definidos. Cada campo tiene tipo, validaciones y configuración de visualización.
 
 | Property                                                                               | Pattern | Type   | Deprecated | Definition | Title/Description |
 | -------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
@@ -508,7 +632,7 @@ must respect the following conditions
 | - [key](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_key )       | No      | string | No         | -          | -                 |
 | + [fields](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields ) | No      | object | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_type"></a>7.2.2.1.10.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > type`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_type"></a>7.2.2.1.17.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > type`
 
 |              |         |
 | ------------ | ------- |
@@ -517,33 +641,36 @@ must respect the following conditions
 
 Specific value: `"form"`
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_title"></a>7.2.2.1.10.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > title`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_title"></a>7.2.2.1.17.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > title`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_key"></a>7.2.2.1.10.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > key`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_key"></a>7.2.2.1.17.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > key`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields"></a>7.2.2.1.10.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields"></a>7.2.2.1.17.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields`
 
-|                           |                                                                                                                                                       |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                                              |
-| **Required**              | Yes                                                                                                                                                   |
-| **Additional properties** | [Each additional property must conform to the schema](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties) |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | Yes              |
+| **Additional properties** | Any type allowed |
 
-| Property                                                                                              | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ----------------------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties ) | No      | object | No         | -          | -                 |
+| Property                                                                                                          | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ----------------------------------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [^[a-zA-Z_][a-zA-Z0-9_]*$](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1 ) | Yes     | object | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties"></a>7.2.2.1.10.1.4.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1"></a>7.2.2.1.17.1.4.1. Pattern Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$`
+> All properties whose name matches the regular expression
+```^[a-zA-Z_][a-zA-Z0-9_]*$``` ([Test](https://regex101.com/?regex=%5E%5Ba-zA-Z_%5D%5Ba-zA-Z0-9_%5D%2A%24))
+must respect the following conditions
 
 |                           |             |
 | ------------------------- | ----------- |
@@ -551,32 +678,32 @@ Specific value: `"form"`
 | **Required**              | No          |
 | **Additional properties** | Not allowed |
 
-| Property                                                                                                                     | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_type )               | No      | string  | No         | -          | -                 |
-| + [required](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_required )       | No      | boolean | No         | -          | -                 |
-| - [check](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_check )             | No      | string  | No         | -          | -                 |
-| + [placeholder](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_placeholder ) | No      | string  | No         | -          | -                 |
-| - [width](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_width )             | No      | string  | No         | -          | -                 |
-| - [origin](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_origin )           | No      | string  | No         | -          | -                 |
-| - [default](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_default )         | No      | string  | No         | -          | -                 |
-| - [rowId](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_rowId )             | No      | string  | No         | -          | -                 |
+| Property                                                                                                         | Pattern | Type    | Deprecated | Definition | Title/Description |
+| ---------------------------------------------------------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
+| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_type )               | No      | string  | No         | -          | -                 |
+| + [required](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_required )       | No      | boolean | No         | -          | -                 |
+| - [check](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_check )             | No      | string  | No         | -          | -                 |
+| + [placeholder](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_placeholder ) | No      | string  | No         | -          | -                 |
+| - [origin](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_origin )           | No      | string  | No         | -          | -                 |
+| - [width](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_width )             | No      | string  | No         | -          | -                 |
+| - [default](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_default )         | No      | string  | No         | -          | -                 |
+| - [rowId](#activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_rowId )             | No      | string  | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_type"></a>7.2.2.1.10.1.4.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > type`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_type"></a>7.2.2.1.17.1.4.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > type`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_required"></a>7.2.2.1.10.1.4.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > required`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_required"></a>7.2.2.1.17.1.4.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > required`
 
 |              |           |
 | ------------ | --------- |
 | **Type**     | `boolean` |
 | **Required** | Yes       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_check"></a>7.2.2.1.10.1.4.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > check`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_check"></a>7.2.2.1.17.1.4.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > check`
 
 |              |          |
 | ------------ | -------- |
@@ -587,83 +714,92 @@ Specific value: `"form"`
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Must match regular expression** | ```^(validar(String\|Fecha\|InNumero\|OutNumero\|FechaUI)\|VerificarMismoValor)\(.+\)[ ;]*$``` [Test](https://regex101.com/?regex=%5E%28validar%28String%7CFecha%7CInNumero%7COutNumero%7CFechaUI%29%7CVerificarMismoValor%29%5C%28.%2B%5C%29%5B+%3B%5D%2A%24) |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_placeholder"></a>7.2.2.1.10.1.4.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > placeholder`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_placeholder"></a>7.2.2.1.17.1.4.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > placeholder`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_width"></a>7.2.2.1.10.1.4.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > width`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_origin"></a>7.2.2.1.17.1.4.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > origin`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_origin"></a>7.2.2.1.10.1.4.1.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > origin`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_width"></a>7.2.2.1.17.1.4.1.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > width`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_default"></a>7.2.2.1.10.1.4.1.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > default`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_default"></a>7.2.2.1.17.1.4.1.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > default`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_additionalProperties_rowId"></a>7.2.2.1.10.1.4.1.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 0 > fields > additionalProperties > rowId`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i0_fields_pattern1_rowId"></a>7.2.2.1.17.1.4.1.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > rowId`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i1"></a>7.2.2.1.10.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 1`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i1"></a>7.2.2.1.17.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Photos Implementation`
+
+**Title:** Photos Implementation
 
 |                           |                  |
 | ------------------------- | ---------------- |
 | **Type**                  | `object`         |
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
+
+**Description:** Captura de fotos. Define los nombres de los campos de foto.
 
 | Property                                                                               | Pattern | Type   | Deprecated | Definition | Title/Description |
 | -------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_type )     | No      | const  | No         | -          | -                 |
-| - [photos](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos ) | No      | object | No         | -          | -                 |
+| + [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_type )     | No      | const  | No         | -          | -                 |
+| + [photos](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos ) | No      | object | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i1_type"></a>7.2.2.1.10.2.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 1 > type`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i1_type"></a>7.2.2.1.17.2.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Photos Implementation > type`
 
 |              |         |
 | ------------ | ------- |
 | **Type**     | `const` |
-| **Required** | No      |
+| **Required** | Yes     |
 
 Specific value: `"photos"`
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos"></a>7.2.2.1.10.2.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 1 > photos`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos"></a>7.2.2.1.17.2.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Photos Implementation > photos`
 
-|                           |                                                                                                                                                       |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                                              |
-| **Required**              | No                                                                                                                                                    |
-| **Additional properties** | [Each additional property must conform to the schema](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos_additionalProperties) |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | Yes              |
+| **Additional properties** | Any type allowed |
 
-| Property                                                                                              | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ----------------------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos_additionalProperties ) | No      | string | No         | -          | -                 |
+| Property                                                                                                          | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ----------------------------------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [^[a-zA-Z_][a-zA-Z0-9_]*$](#activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos_pattern1 ) | Yes     | string | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos_additionalProperties"></a>7.2.2.1.10.2.2.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 1 > photos > additionalProperties`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i1_photos_pattern1"></a>7.2.2.1.17.2.2.1. Pattern Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Photos Implementation > photos > ^[a-zA-Z_][a-zA-Z0-9_]*$`
+> All properties whose name matches the regular expression
+```^[a-zA-Z_][a-zA-Z0-9_]*$``` ([Test](https://regex101.com/?regex=%5E%5Ba-zA-Z_%5D%5Ba-zA-Z0-9_%5D%2A%24))
+must respect the following conditions
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i2"></a>7.2.2.1.10.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 2`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i2"></a>7.2.2.1.17.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Video Implementation`
+
+**Title:** Video Implementation
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -671,36 +807,40 @@ Specific value: `"photos"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
+**Description:** Grabación de video. Requiere descripción y calidad del video.
+
 | Property                                                                                         | Pattern | Type    | Deprecated | Definition | Title/Description |
 | ------------------------------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_type )               | No      | const   | No         | -          | -                 |
-| - [description](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_description ) | No      | string  | No         | -          | -                 |
+| + [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_type )               | No      | const   | No         | -          | -                 |
+| + [description](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_description ) | No      | string  | No         | -          | -                 |
 | + [quality](#activities_pattern1_instructions_pattern1_implementation_oneOf_i2_quality )         | No      | integer | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i2_type"></a>7.2.2.1.10.3.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 2 > type`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i2_type"></a>7.2.2.1.17.3.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Video Implementation > type`
 
 |              |         |
 | ------------ | ------- |
 | **Type**     | `const` |
-| **Required** | No      |
+| **Required** | Yes     |
 
 Specific value: `"video"`
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i2_description"></a>7.2.2.1.10.3.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 2 > description`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i2_description"></a>7.2.2.1.17.3.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Video Implementation > description`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
-| **Required** | No       |
+| **Required** | Yes      |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i2_quality"></a>7.2.2.1.10.3.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 2 > quality`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i2_quality"></a>7.2.2.1.17.3.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Video Implementation > quality`
 
 |              |           |
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | Yes       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3"></a>7.2.2.1.10.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3"></a>7.2.2.1.17.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation`
+
+**Title:** Multiple Choice Implementation
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -708,29 +848,31 @@ Specific value: `"video"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
+**Description:** Preguntas de opción múltiple. Cada pregunta tiene id, texto y respuestas predefinidas.
+
 | Property                                                                                     | Pattern | Type            | Deprecated | Definition | Title/Description |
 | -------------------------------------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_type )           | No      | const           | No         | -          | -                 |
+| + [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_type )           | No      | const           | No         | -          | -                 |
 | - [message](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_message )     | No      | string          | No         | -          | -                 |
 | + [questions](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions ) | No      | array of object | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_type"></a>7.2.2.1.10.4.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > type`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_type"></a>7.2.2.1.17.4.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > type`
 
 |              |         |
 | ------------ | ------- |
 | **Type**     | `const` |
-| **Required** | No      |
+| **Required** | Yes     |
 
 Specific value: `"multipleChoice"`
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_message"></a>7.2.2.1.10.4.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > message`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_message"></a>7.2.2.1.17.4.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > message`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions"></a>7.2.2.1.10.4.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions"></a>7.2.2.1.17.4.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions`
 
 |              |                   |
 | ------------ | ----------------- |
@@ -749,7 +891,7 @@ Specific value: `"multipleChoice"`
 | ----------------------------------------------------------------------------------------------------- | ----------- |
 | [questions items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items) | -           |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items"></a>7.2.2.1.10.4.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items"></a>7.2.2.1.17.4.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -760,26 +902,26 @@ Specific value: `"multipleChoice"`
 | Property                                                                                                 | Pattern | Type            | Deprecated | Definition | Title/Description |
 | -------------------------------------------------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
 | + [id](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_id )           | No      | string          | No         | -          | -                 |
-| - [text](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_text )       | No      | string          | No         | -          | -                 |
+| + [text](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_text )       | No      | string          | No         | -          | -                 |
 | + [answers](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers ) | No      | array of string | No         | -          | -                 |
 | - [default](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_default ) | No      | string          | No         | -          | -                 |
-| - [height](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_height )   | No      | integer         | No         | -          | -                 |
+| - [height](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_height )   | No      | number          | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_id"></a>7.2.2.1.10.4.3.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > id`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_id"></a>7.2.2.1.17.4.3.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > id`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_text"></a>7.2.2.1.10.4.3.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > text`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_text"></a>7.2.2.1.17.4.3.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > text`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
-| **Required** | No       |
+| **Required** | Yes      |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers"></a>7.2.2.1.10.4.3.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > answers`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers"></a>7.2.2.1.17.4.3.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > answers`
 
 |              |                   |
 | ------------ | ----------------- |
@@ -798,28 +940,30 @@ Specific value: `"multipleChoice"`
 | ----------------------------------------------------------------------------------------------------------------- | ----------- |
 | [answers items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers_items) | -           |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers_items"></a>7.2.2.1.10.4.3.1.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > answers > answers items
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_answers_items"></a>7.2.2.1.17.4.3.1.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > answers > answers items
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_default"></a>7.2.2.1.10.4.3.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > default`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_default"></a>7.2.2.1.17.4.3.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > default`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_height"></a>7.2.2.1.10.4.3.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 3 > questions > questions items > height`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i3_questions_items_height"></a>7.2.2.1.17.4.3.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Multiple Choice Implementation > questions > questions items > height`
 
-|              |           |
-| ------------ | --------- |
-| **Type**     | `integer` |
-| **Required** | No        |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4"></a>7.2.2.1.10.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4"></a>7.2.2.1.17.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation`
+
+**Title:** Double Input Implementation
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -827,31 +971,167 @@ Specific value: `"multipleChoice"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
+**Description:** Entrada dual con valores de referencia y tolerancia. Compara dos entradas contra un valor conocido.
+
 | Property                                                                                               | Pattern | Type            | Deprecated | Definition | Title/Description |
 | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_type )                     | No      | const           | No         | -          | -                 |
-| - [description](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_description )       | No      | string          | No         | -          | -                 |
-| - [labels](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels )                 | No      | array of string | No         | -          | -                 |
-| - [referenceValue](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_referenceValue ) | No      | string          | No         | -          | -                 |
-| - [tolerance](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_tolerance )           | No      | number          | No         | -          | -                 |
+| + [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_type )                     | No      | const           | No         | -          | -                 |
+| + [description](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_description )       | No      | string          | No         | -          | -                 |
+| + [labels](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels )                 | No      | array of string | No         | -          | -                 |
+| + [referenceValue](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_referenceValue ) | No      | string          | No         | -          | -                 |
+| + [tolerance](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_tolerance )           | No      | number          | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_type"></a>7.2.2.1.10.5.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > type`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_type"></a>7.2.2.1.17.5.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > type`
 
 |              |         |
 | ------------ | ------- |
 | **Type**     | `const` |
-| **Required** | No      |
+| **Required** | Yes     |
 
 Specific value: `"doubleInput"`
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_description"></a>7.2.2.1.10.5.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > description`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_description"></a>7.2.2.1.17.5.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > description`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels"></a>7.2.2.1.17.5.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > labels`
+
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of string` |
+| **Required** | Yes               |
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | 2                  |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                                 | Description |
+| ----------------------------------------------------------------------------------------------- | ----------- |
+| [labels items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels_items) | -           |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels_items"></a>7.2.2.1.17.5.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > labels > labels items
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels"></a>7.2.2.1.10.5.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > labels`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_referenceValue"></a>7.2.2.1.17.5.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > referenceValue`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_tolerance"></a>7.2.2.1.17.5.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Double Input Implementation > tolerance`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | Yes      |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5"></a>7.2.2.1.17.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation`
+
+**Title:** Form2 Implementation
+
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+
+**Description:** Formulario avanzado con más tipos de campos. Soporta choice, out, image, photo, video, formFree y background.
+
+| Property                                                                                         | Pattern | Type   | Deprecated | Definition | Title/Description                                                                                                                             |
+| ------------------------------------------------------------------------------------------------ | ------- | ------ | ---------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| + [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_type )               | No      | const  | No         | -          | -                                                                                                                                             |
+| - [title](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_title )             | No      | string | No         | -          | -                                                                                                                                             |
+| + [fields](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields )           | No      | object | No         | -          | -                                                                                                                                             |
+| - [expressions](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_expressions ) | No      | object | No         | -          | Expresiones de lógica para validar campos, habilitarlos o hacerlos visibles. El sufijo _valid, _enabled o _visible indica la regla a aplicar. |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_type"></a>7.2.2.1.17.6.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > type`
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `const` |
+| **Required** | Yes     |
+
+Specific value: `"form2"`
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_title"></a>7.2.2.1.17.6.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > title`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields"></a>7.2.2.1.17.6.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields`
+
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | Yes              |
+| **Additional properties** | Any type allowed |
+
+| Property                                                                                                          | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ----------------------------------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [^[a-zA-Z_][a-zA-Z0-9_]*$](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1 ) | Yes     | object | No         | -          | -                 |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1"></a>7.2.2.1.17.6.3.1. Pattern Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$`
+> All properties whose name matches the regular expression
+```^[a-zA-Z_][a-zA-Z0-9_]*$``` ([Test](https://regex101.com/?regex=%5E%5Ba-zA-Z_%5D%5Ba-zA-Z0-9_%5D%2A%24))
+must respect the following conditions
+
+|                           |             |
+| ------------------------- | ----------- |
+| **Type**                  | `object`    |
+| **Required**              | No          |
+| **Additional properties** | Not allowed |
+
+| Property                                                                                                               | Pattern | Type             | Deprecated | Definition | Title/Description |
+| ---------------------------------------------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ----------------- |
+| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_type )                     | No      | enum (of string) | No         | -          | -                 |
+| - [options](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_options )               | No      | array of string  | No         | -          | -                 |
+| - [required](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_required )             | No      | boolean          | No         | -          | -                 |
+| - [label](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_label )                   | No      | string           | No         | -          | -                 |
+| - [check](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_check )                   | No      | string           | No         | -          | -                 |
+| - [placeholder](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_placeholder )       | No      | string           | No         | -          | -                 |
+| - [origin](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_origin )                 | No      | string           | No         | -          | -                 |
+| - [width](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_width )                   | No      | string           | No         | -          | -                 |
+| - [optionWidth](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_optionWidth )       | No      | string           | No         | -          | -                 |
+| - [default](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_default )               | No      | string           | No         | -          | -                 |
+| - [rowId](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_rowId )                   | No      | string           | No         | -          | -                 |
+| - [noLabelOnInput](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_noLabelOnInput ) | No      | boolean          | No         | -          | -                 |
+| - [height](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_height )                 | No      | number           | No         | -          | -                 |
+| - [y0](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_y0 )                         | No      | number           | No         | -          | -                 |
+| - [size](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_size )                     | No      | integer          | No         | -          | -                 |
+| - [duration](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_duration )             | No      | integer          | No         | -          | -                 |
+| - [quality](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_quality )               | No      | integer          | No         | -          | -                 |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_type"></a>7.2.2.1.17.6.3.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > type`
+
+|              |                    |
+| ------------ | ------------------ |
+| **Type**     | `enum (of string)` |
+| **Required** | No                 |
+
+Must be one of:
+* "choice"
+* "out"
+* "image"
+* "photo"
+* "video"
+* "formFree"
+* "background"
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_options"></a>7.2.2.1.17.6.3.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > options`
 
 |              |                   |
 | ------------ | ----------------- |
@@ -866,32 +1146,127 @@ Specific value: `"doubleInput"`
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                                                                 | Description |
-| ----------------------------------------------------------------------------------------------- | ----------- |
-| [labels items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels_items) | -           |
+| Each item of this array must be                                                                                   | Description |
+| ----------------------------------------------------------------------------------------------------------------- | ----------- |
+| [options items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_options_items) | -           |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_labels_items"></a>7.2.2.1.10.5.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > labels > labels items
-
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
-
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_referenceValue"></a>7.2.2.1.10.5.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > referenceValue`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_options_items"></a>7.2.2.1.17.6.3.1.2.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > options > options items
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i4_tolerance"></a>7.2.2.1.10.5.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 4 > tolerance`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_required"></a>7.2.2.1.17.6.3.1.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > required`
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | No        |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_label"></a>7.2.2.1.17.6.3.1.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > label`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_check"></a>7.2.2.1.17.6.3.1.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > check`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+| Restrictions                      |                                                                                                                                                                                                                                                                |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Must match regular expression** | ```^(validar(String\|Fecha\|InNumero\|OutNumero\|FechaUI)\|VerificarMismoValor)\(.+\)[ ;]*$``` [Test](https://regex101.com/?regex=%5E%28validar%28String%7CFecha%7CInNumero%7COutNumero%7CFechaUI%29%7CVerificarMismoValor%29%5C%28.%2B%5C%29%5B+%3B%5D%2A%24) |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_placeholder"></a>7.2.2.1.17.6.3.1.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > placeholder`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_origin"></a>7.2.2.1.17.6.3.1.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > origin`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_width"></a>7.2.2.1.17.6.3.1.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > width`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_optionWidth"></a>7.2.2.1.17.6.3.1.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > optionWidth`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_default"></a>7.2.2.1.17.6.3.1.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > default`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_rowId"></a>7.2.2.1.17.6.3.1.11. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > rowId`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_noLabelOnInput"></a>7.2.2.1.17.6.3.1.12. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > noLabelOnInput`
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | No        |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_height"></a>7.2.2.1.17.6.3.1.13. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > height`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `number` |
 | **Required** | No       |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5"></a>7.2.2.1.10.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 5`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_y0"></a>7.2.2.1.17.6.3.1.14. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > y0`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_size"></a>7.2.2.1.17.6.3.1.15. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > size`
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_duration"></a>7.2.2.1.17.6.3.1.16. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > duration`
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_fields_pattern1_quality"></a>7.2.2.1.17.6.3.1.17. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > fields > ^[a-zA-Z_][a-zA-Z0-9_]*$ > quality`
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_expressions"></a>7.2.2.1.17.6.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > expressions`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -899,20 +1274,44 @@ Specific value: `"doubleInput"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-| Property                                                                           | Pattern | Type  | Deprecated | Definition | Title/Description |
-| ---------------------------------------------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_type ) | No      | const | No         | -          | -                 |
+**Description:** Expresiones de lógica para validar campos, habilitarlos o hacerlos visibles. El sufijo _valid, _enabled o _visible indica la regla a aplicar.
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_type"></a>7.2.2.1.10.6.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 5 > type`
+| Property                                                                                                                                         | Pattern | Type            | Deprecated | Definition | Title/Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | --------------- | ---------- | ---------- | ----------------- |
+| - [^[a-zA-Z_][a-zA-Z0-9_]*_(valid\|enabled\|visible)$](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_expressions_pattern1 ) | Yes     | array of string | No         | -          | -                 |
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `const` |
-| **Required** | No      |
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_expressions_pattern1"></a>7.2.2.1.17.6.4.1. Pattern Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > expressions > ^[a-zA-Z_][a-zA-Z0-9_]*_(valid\|enabled\|visible)$`
+> All properties whose name matches the regular expression
+```^[a-zA-Z_][a-zA-Z0-9_]*_(valid|enabled|visible)$``` ([Test](https://regex101.com/?regex=%5E%5Ba-zA-Z_%5D%5Ba-zA-Z0-9_%5D%2A_%28valid%7Cenabled%7Cvisible%29%24))
+must respect the following conditions
 
-Specific value: `"form2"`
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of string` |
+| **Required** | No                |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i6"></a>7.2.2.1.10.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 6`
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                                                                                         | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [^[a-zA-Z_][a-zA-Z0-9_]*_(valid|enabled|visible)$ items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i5_expressions_pattern1_items) | -           |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i5_expressions_pattern1_items"></a>7.2.2.1.17.6.4.1.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Form2 Implementation > expressions > ^[a-zA-Z_][a-zA-Z0-9_]*_(valid\|enabled\|visible)$ > ^[a-zA-Z_][a-zA-Z0-9_]*_(valid\|enabled\|visible)$ items
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i6"></a>7.2.2.1.17.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Approval Request Point`
+
+**Title:** Approval Request Point
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -920,20 +1319,32 @@ Specific value: `"form2"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-| Property                                                                           | Pattern | Type  | Deprecated | Definition | Title/Description |
-| ---------------------------------------------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6_type ) | No      | const | No         | -          | -                 |
+**Description:** Punto de solicitud de aprobación. Define cuándo se requiere aprobación durante el proceso.
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i6_type"></a>7.2.2.1.10.7.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 6 > type`
+| Property                                                                           | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ---------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| + [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6_type ) | No      | const  | No         | -          | -                 |
+| - [when](#activities_pattern1_instructions_pattern1_implementation_oneOf_i6_when ) | No      | string | No         | -          | -                 |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i6_type"></a>7.2.2.1.17.7.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Approval Request Point > type`
 
 |              |         |
 | ------------ | ------- |
 | **Type**     | `const` |
-| **Required** | No      |
+| **Required** | Yes     |
 
 Specific value: `"approvalRequestPoint"`
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i7"></a>7.2.2.1.10.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 7`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i6_when"></a>7.2.2.1.17.7.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Approval Request Point > when`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i7"></a>7.2.2.1.17.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Check Tolerance`
+
+**Title:** Check Tolerance
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -941,20 +1352,24 @@ Specific value: `"approvalRequestPoint"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
+**Description:** Verificación de tolerancia. Compara valores ingresados contra rangos aceptables.
+
 | Property                                                                           | Pattern | Type  | Deprecated | Definition | Title/Description |
 | ---------------------------------------------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i7_type ) | No      | const | No         | -          | -                 |
+| + [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i7_type ) | No      | const | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i7_type"></a>7.2.2.1.10.8.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 7 > type`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i7_type"></a>7.2.2.1.17.8.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Check Tolerance > type`
 
 |              |         |
 | ------------ | ------- |
 | **Type**     | `const` |
-| **Required** | No      |
+| **Required** | Yes     |
 
 Specific value: `"checkTolerance"`
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8"></a>7.2.2.1.10.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 8`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8"></a>7.2.2.1.17.9. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation`
+
+**Title:** Free Form Implementation
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -962,20 +1377,64 @@ Specific value: `"checkTolerance"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-| Property                                                                           | Pattern | Type  | Deprecated | Definition | Title/Description |
-| ---------------------------------------------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_type ) | No      | const | No         | -          | -                 |
+**Description:** Formulario libre sobre imagen. Permite posicionar campos sobre una imagen de fondo.
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_type"></a>7.2.2.1.10.9.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 8 > type`
+| Property                                                                               | Pattern | Type   | Deprecated | Definition | Title/Description |
+| -------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| + [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_type )     | No      | const  | No         | -          | -                 |
+| + [image](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_image )   | No      | string | No         | -          | -                 |
+| - [when](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_when )     | No      | string | No         | -          | -                 |
+| + [fields](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields ) | No      | array  | No         | -          | -                 |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_type"></a>7.2.2.1.17.9.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > type`
 
 |              |         |
 | ------------ | ------- |
 | **Type**     | `const` |
-| **Required** | No      |
+| **Required** | Yes     |
 
 Specific value: `"freeForm"`
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9"></a>7.2.2.1.10.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 9`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_image"></a>7.2.2.1.17.9.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > image`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_when"></a>7.2.2.1.17.9.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > when`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields"></a>7.2.2.1.17.9.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields`
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | Yes     |
+
+###### <a name="autogenerated_heading_3"></a>7.2.2.1.17.9.4.1. The following properties are required
+* id
+* type
+* required
+* placeholder
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                                 | Description |
+| ----------------------------------------------------------------------------------------------- | ----------- |
+| [fields items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items) | -           |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items"></a>7.2.2.1.17.9.4.2. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -983,11 +1442,137 @@ Specific value: `"freeForm"`
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-| Property                                                                           | Pattern | Type  | Deprecated | Definition | Title/Description |
-| ---------------------------------------------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
-| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_type ) | No      | const | No         | -          | -                 |
+| Property                                                                                                      | Pattern | Type    | Deprecated | Definition | Title/Description |
+| ------------------------------------------------------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
+| - [id](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_id )                   | No      | string  | No         | -          | -                 |
+| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_type )               | No      | string  | No         | -          | -                 |
+| - [required](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_required )       | No      | boolean | No         | -          | -                 |
+| - [check](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_check )             | No      | string  | No         | -          | -                 |
+| - [placeholder](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_placeholder ) | No      | string  | No         | -          | -                 |
+| - [width](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_width )             | No      | string  | No         | -          | -                 |
+| - [height](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_height )           | No      | string  | No         | -          | -                 |
+| - [position](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position )       | No      | array   | No         | -          | -                 |
 
-###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9_type"></a>7.2.2.1.10.10.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > item 9 > type`
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_id"></a>7.2.2.1.17.9.4.2.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > id`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_type"></a>7.2.2.1.17.9.4.2.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > type`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_required"></a>7.2.2.1.17.9.4.2.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > required`
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | No        |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_check"></a>7.2.2.1.17.9.4.2.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > check`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+| Restrictions                      |                                                                                                                                                                                                                                                                |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Must match regular expression** | ```^(validar(String\|Fecha\|InNumero\|OutNumero\|FechaUI)\|VerificarMismoValor)\(.+\)[ ;]*$``` [Test](https://regex101.com/?regex=%5E%28validar%28String%7CFecha%7CInNumero%7COutNumero%7CFechaUI%29%7CVerificarMismoValor%29%5C%28.%2B%5C%29%5B+%3B%5D%2A%24) |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_placeholder"></a>7.2.2.1.17.9.4.2.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > placeholder`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_width"></a>7.2.2.1.17.9.4.2.6. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > width`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_height"></a>7.2.2.1.17.9.4.2.7. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > height`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position"></a>7.2.2.1.17.9.4.2.8. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > position`
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | No      |
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                                                  | Description |
+| ---------------------------------------------------------------------------------------------------------------- | ----------- |
+| [position items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position_items) | -           |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position_items"></a>7.2.2.1.17.9.4.2.8.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > position > position items
+
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `combining`      |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+
+| Any of(Option)                                                                                                    |
+| ----------------------------------------------------------------------------------------------------------------- |
+| [item 0](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position_items_anyOf_i0) |
+| [item 1](#activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position_items_anyOf_i1) |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position_items_anyOf_i0"></a>7.2.2.1.17.9.4.2.8.1.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > position > position items > anyOf > item 0`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i8_fields_items_position_items_anyOf_i1"></a>7.2.2.1.17.9.4.2.8.1.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Free Form Implementation > fields > fields items > position > position items > anyOf > item 1`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9"></a>7.2.2.1.17.10. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo`
+
+**Title:** Triple Input Photo
+
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+
+**Description:** Triple entrada con fotos. Compara tres valores con fotos asociadas y rango de tolerancia.
+
+| Property                                                                                         | Pattern | Type            | Deprecated | Definition | Title/Description |
+| ------------------------------------------------------------------------------------------------ | ------- | --------------- | ---------- | ---------- | ----------------- |
+| - [type](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_type )               | No      | const           | No         | -          | -                 |
+| - [labels](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_labels )           | No      | array of string | No         | -          | -                 |
+| - [photoLabels](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_photoLabels ) | No      | array of string | No         | -          | -                 |
+| - [validRange](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_validRange )   | No      | array of number | No         | -          | -                 |
+| - [tolerancia](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_tolerancia )   | No      | integer         | No         | -          | -                 |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9_type"></a>7.2.2.1.17.10.1. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > type`
 
 |              |         |
 | ------------ | ------- |
@@ -996,5 +1581,90 @@ Specific value: `"freeForm"`
 
 Specific value: `"tripleInputPhoto"`
 
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9_labels"></a>7.2.2.1.17.10.2. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > labels`
+
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of string` |
+| **Required** | No                |
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | 3                  |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                                 | Description |
+| ----------------------------------------------------------------------------------------------- | ----------- |
+| [labels items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_labels_items) | -           |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9_labels_items"></a>7.2.2.1.17.10.2.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > labels > labels items
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9_photoLabels"></a>7.2.2.1.17.10.3. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > photoLabels`
+
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of string` |
+| **Required** | No                |
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | 3                  |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                                           | Description |
+| --------------------------------------------------------------------------------------------------------- | ----------- |
+| [photoLabels items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_photoLabels_items) | -           |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9_photoLabels_items"></a>7.2.2.1.17.10.3.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > photoLabels > photoLabels items
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9_validRange"></a>7.2.2.1.17.10.4. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > validRange`
+
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of number` |
+| **Required** | No                |
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | 2                  |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                                         | Description |
+| ------------------------------------------------------------------------------------------------------- | ----------- |
+| [validRange items](#activities_pattern1_instructions_pattern1_implementation_oneOf_i9_validRange_items) | -           |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9_validRange_items"></a>7.2.2.1.17.10.4.1. SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > validRange > validRange items
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
+
+###### <a name="activities_pattern1_instructions_pattern1_implementation_oneOf_i9_tolerancia"></a>7.2.2.1.17.10.5. Property `SWAR Process Definition > activities > ^[A-Za-z0-9_]+$ > instructions > ^[A-Za-z0-9_]+$ > implementation > oneOf > Triple Input Photo > tolerancia`
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-08-27 at 10:38:32 -0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-04-30 at 12:24:40 -0300

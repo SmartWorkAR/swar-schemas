@@ -1,0 +1,611 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://smartworkar.github.io/swar-schemas/schemas/v2.0.0/process.schema.json",
+  "version": "2.0.0",
+  "type": "object",
+  "title": "SWAR Process Definition v2",
+  "description": "SWAR Version 2.0 process definition",
+  "required": [
+    "processRef",
+    "dataModel",
+    "activities"
+  ],
+  "properties": {
+    "processRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "externalIdName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dataModel": {
+      "allOf": [
+        {
+          "title": "Data Type Reference",
+          "description": "Referencia al tipo de dato definido en DataType. Puede ser cualquiera de los tipos: string, number, boolean, datetime, array, object, etc.",
+          "$ref": "#/definitions/DataType"
+        },
+        {
+          "title": "Object Type Constraint",
+          "description": "Restricción adicional que requiere que el tipo de dato sea específicamente 'object'. Se usa para definir estructuras con campos.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "object"
+            }
+          },
+          "required": [
+            "type"
+          ]
+        }
+      ]
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Activity"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "DataType": {
+      "oneOf": [
+        {
+          "title": "String Type",
+          "description": "Cadena de texto con opciones de máscara y validación. Ejemplo: nombres, direcciones, códigos.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "string"
+            },
+            "nullable": {
+              "type": "boolean"
+            },
+            "mask": {
+              "type": "string"
+            },
+            "check": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Number Type",
+          "description": "Campo numérico con control de precisión. Soporta números enteros y decimales con configurable digits y decimals.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": [
+                "number",
+                "int"
+              ]
+            },
+            "digits": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "decimals": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "nullable": {
+              "type": "boolean"
+            },
+            "check": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Boolean Type",
+          "description": "Valor booleano true/false. Puede ser nulo.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "boolean"
+            },
+            "nullable": {
+              "type": "boolean"
+            },
+            "check": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "DateTime Type",
+          "description": "Fecha y/o hora. Almacena valores de fecha con formato ISO 8601.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "datetime"
+            },
+            "nullable": {
+              "type": "boolean"
+            },
+            "check": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Any Type",
+          "description": "Tipo flexible que acepta cualquier valor. Útil para datos dinámicos o campos sin tipo fijo.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "any"
+            },
+            "nullable": {
+              "type": "boolean"
+            },
+            "check": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Null Type",
+          "description": "Valor nulo explícito. Indica ausencia de valor o campo vacío.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "null"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Array Type",
+          "description": "Arreglo de elementos del mismo tipo. Define elementType para especificar el tipo de cada elemento.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "array"
+            },
+            "elementType": {
+              "$ref": "#/definitions/DataType"
+            },
+            "nullable": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "type",
+            "elementType"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Object Type",
+          "description": "Objeto con campos definidos. Cada campo tiene su propio DataType permitiendo estructuras anidadas.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "object"
+            },
+            "nullable": {
+              "type": "boolean"
+            },
+            "fields": {
+              "type": "object",
+              "minProperties": 0,
+              "additionalProperties": {
+                "$ref": "#/definitions/DataType"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "fields"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Activity": {
+      "oneOf": [
+        {
+          "title": "Task Activity",
+          "description": "Una tarea atómica que ejecuta una acción específica (formulario, instrucción, o elección). Es la unidad básica de trabajo.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "task"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "action": {
+              "$ref": "#/definitions/TaskAction"
+            },
+            "required": {
+              "type": "boolean",
+              "default": true
+            },
+            "input": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Mapping"
+              },
+              "default": []
+            },
+            "output": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Mapping"
+              },
+              "default": []
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "action"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Sequence Activity",
+          "description": "Grupo de actividades que se ejecutan en orden secuencial. Las actividades se procesan una tras otra.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "sequence"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "activities": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Activity"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "activities"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Group Activity",
+          "description": "Agrupador lógico de actividades. Permite organizar actividades relacionadas sin afectar el flujo de ejecución.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "group"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "activities": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Activity"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "activities"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Decision Activity",
+          "description": "Decisión condicional que evalúa una expresión y ejecuta diferentes ramas según el resultado. Soporta múltiples ramas.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "decision"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "expression": {
+              "type": "string"
+            },
+            "branches": {
+              "type": "object",
+              "minProperties": 0,
+              "additionalProperties": {
+                "$ref": "#/definitions/Activity"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "expression",
+            "branches"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Script Activity",
+          "description": "Ejecuta código script. El resultado se almacena en outputKey para ser usado por otras actividades.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "script"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "script": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "outputKey": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "script",
+            "outputKey"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "HTTP Activity",
+          "description": "Llama a un endpoint HTTP. Soporta GET, POST, PUT, DELETE y otros métodos. El resultado se guarda en outputKey.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "http"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "urlExpression": {
+              "type": "string"
+            },
+            "method": {
+              "type": "string"
+            },
+            "bodyExpression": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "headers": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "outputKey": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "urlExpression",
+            "method",
+            "outputKey"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "TaskAction": {
+      "oneOf": [
+        {
+          "title": "Form Action",
+          "description": "Muestra un formulario al usuario con campos definidos. El usuario completa los datos y se almacenan en el proceso.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "form"
+            },
+            "definition": {
+              "$ref": "#/definitions/FormDefinition"
+            }
+          },
+          "required": [
+            "type",
+            "definition"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Instruction Action",
+          "description": "Muestra instrucciones al usuario. No requiere entrada de datos, solo muestra información.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "instruction"
+            },
+            "instructions": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "instructions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "title": "Choice Action",
+          "description": "Presenta opciones al usuario para que seleccione una. Cada opción tiene una clave y etiqueta.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "choice"
+            },
+            "prompt": {
+              "type": "string"
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ChoiceOption"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "prompt",
+            "options"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "FormDefinition": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "elements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FormRow"
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "FormRow": {
+      "type": "object",
+      "properties": {
+        "elements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FormElement"
+          }
+        }
+      },
+      "required": [
+        "elements"
+      ],
+      "additionalProperties": false
+    },
+    "FormElement": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "ChoiceOption": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "key",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "Mapping": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source",
+        "target"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

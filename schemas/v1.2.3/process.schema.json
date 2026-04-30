@@ -161,6 +161,8 @@
                       "minProperties": 1,
                       "oneOf": [
                         {
+                          "title": "Form Implementation",
+                          "description": "Formulario con campos definidos. Cada campo tiene tipo, validaciones y configuración de visualización.",
                           "type": "object",
                           "required": [
                             "type",
@@ -220,6 +222,8 @@
                           }
                         },
                         {
+                          "title": "Photos Implementation",
+                          "description": "Captura de fotos. Define los nombres de los campos de foto.",
                           "type": "object",
                           "properties": {
                             "type": {
@@ -240,6 +244,8 @@
                           ]
                         },
                         {
+                          "title": "Video Implementation",
+                          "description": "Grabación de video. Requiere descripción y calidad del video.",
                           "type": "object",
                           "required": [
                             "type",
@@ -259,6 +265,8 @@
                           }
                         },
                         {
+                          "title": "Multiple Choice Implementation",
+                          "description": "Preguntas de opción múltiple. Cada pregunta tiene id, texto y respuestas predefinidas.",
                           "type": "object",
                           "properties": {
                             "type": {
@@ -305,6 +313,8 @@
                           ]
                         },
                         {
+                          "title": "Double Input Implementation",
+                          "description": "Entrada dual con valores de referencia y tolerancia. Compara dos entradas contra un valor conocido.",
                           "type": "object",
                           "properties": {
                             "type": {
@@ -336,6 +346,8 @@
                           ]
                         },
                         {
+                          "title": "Form2 Implementation",
+                          "description": "Formulario avanzado con más tipos de campos. Soporta choice, out, image, photo, video, formFree y background.",
                           "type": "object",
                           "properties": {
                             "type": {
@@ -439,6 +451,8 @@
                           ]
                         },
                         {
+                          "title": "Approval Request Point",
+                          "description": "Punto de solicitud de aprobación. Define cuándo se requiere aprobación durante el proceso.",
                           "type": "object",
                           "properties": {
                             "type": {
@@ -453,6 +467,8 @@
                           ]
                         },
                         {
+                          "title": "Check Tolerance",
+                          "description": "Verificación de tolerancia. Compara valores ingresados contra rangos aceptables.",
                           "type": "object",
                           "properties": {
                             "type": {
@@ -464,6 +480,8 @@
                           ]
                         },
                         {
+                          "title": "Free Form Implementation",
+                          "description": "Formulario libre sobre imagen. Permite posicionar campos sobre una imagen de fondo.",
                           "type": "object",
                           "required": [
                             "type",
@@ -532,6 +550,8 @@
                           }
                         },
                         {
+                          "title": "Triple Input Photo",
+                          "description": "Triple entrada con fotos. Compara tres valores con fotos asociadas y rango de tolerancia.",
                           "type": "object",
                           "properties": {
                             "type": {

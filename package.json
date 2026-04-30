@@ -1,9 +1,10 @@
 {
   "devDependencies": {
-    "@adobe/jsonschema2md": "^8.0.2"
+    "@adobe/jsonschema2md": "^8.0.11"
   },
   "scripts": {
   	"generate-docs": "jsonschema2md -d schemas/v1.2.3 -o docs",
-    "generate-schema-doc": "pip install json-schema-for-humans; generate-schema-doc --config template_name=md  schemas/v1.2.3/process.schema.json docs/README.md"
+    "generate-schema-doc": "pip install json-schema-for-humans; generate-schema-doc --config template_name=md  schemas/v1.2.3/process.schema.json docs/README.md",
+    "generate-schema-doc-2": "pip install json-schema-for-humans; generate-schema-doc --config template_name=md_nested  schemas/v2.0.0/process.schema.json docs/v2/README.md"
 	}
 }
