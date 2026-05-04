@@ -33,6 +33,9 @@ jobs:
             - name: Generate JSON Schema Documentation
               run: npm run generate-docs
 
+            - name: Generate JSON Schema Documentation v2
+              run: npm run generate-schema-doc-2
+
             # Step 5: Deploy to GitHub Pages
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
