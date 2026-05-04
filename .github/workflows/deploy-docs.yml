@@ -5,7 +5,7 @@ on:
         branches:
             - master
         paths:
-            - schemas/v1.2.*/** # Trigger only when the schemas directory is updated
+            - schemas/v*.*.*/** # Trigger only when the schemas directory is updated
             - package.json
             - package-lock.json
             - README.md
