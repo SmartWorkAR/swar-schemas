@@ -449,12 +449,6 @@
                 "null"
               ]
             },
-            "headers": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
             "outputKey": {
               "type": "string"
             }
@@ -549,6 +543,11 @@
           "items": {
             "$ref": "#/definitions/FormRow"
           }
+        },
+        "parameters": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
         }
       },
       "required": [
@@ -592,20 +591,8 @@
       "additionalProperties": false
     },
     "Mapping": {
-      "type": "object",
-      "properties": {
-        "source": {
-          "type": "string"
-        },
-        "target": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "source",
-        "target"
-      ],
-      "additionalProperties": false
+      "type": "string",
+      "description": "Mapping statement serialized as a string. Either a simple field name or an assignment like 'process.x = task.y'."
     }
   }
 }
