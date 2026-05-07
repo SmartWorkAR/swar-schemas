@@ -3,11 +3,10 @@
   "$id": "https://smartworkar.github.io/swar-schemas/schemas/v2.0.0/process.schema.json",
   "version": "2.0.0",
   "type": "object",
-  "title": "SWAR Process Definition v2 (Corrected)",
-  "description": "SWAR Version 2.0 process definition aligned with sequential testing mock",
+  "title": "SWAR Process Definition v2",
+  "description": "SWAR process definition aligned with modules/model Kotlin serialization",
   "required": [
     "reference",
-    "executionRefName",
     "description",
     "fullDescription",
     "version",
@@ -27,26 +26,327 @@
       "minLength": 1
     },
     "executionRefName": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": "string",
+      "default": "UUID"
     },
-    "version": {
+    "executionRefMask": {
       "type": "string"
     },
+    "version": {
+      "$ref": "#/definitions/SemVer"
+    },
     "definition": {
+      "$ref": "#/definitions/ProcessDef"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "SemVer": {
+      "type": "string",
+      "pattern": "^\\d+(\\.\\d+){0,2}$"
+    },
+    "ProcessDef": {
       "type": "object",
       "required": [
         "processRef",
-        "name",
-        "description",
         "dataModel",
         "activities"
       ],
       "properties": {
         "processRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
           "type": "string"
+        },
+        "externalIdName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "uuid"
+        },
+        "dataModel": {
+          "$ref": "#/definitions/ObjectType"
+        },
+        "activities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Activity"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "DataType": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/DateTimeType"
+        },
+        {
+          "$ref": "#/definitions/AnyType"
+        },
+        {
+          "$ref": "#/definitions/ArrayType"
+        },
+        {
+          "$ref": "#/definitions/ObjectDataType"
+        },
+        {
+          "$ref": "#/definitions/NullType"
+        }
+      ]
+    },
+    "StringType": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "const": "string"
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        },
+        "mask": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "check": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "NumberType": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "const": "number"
+        },
+        "digits": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "decimals": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        },
+        "check": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "BooleanType": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "const": "boolean"
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        },
+        "check": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "DateTimeType": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "const": "datetime"
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        },
+        "check": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "AnyType": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "const": "any"
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        },
+        "check": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ArrayType": {
+      "type": "object",
+      "required": [
+        "type",
+        "elementType"
+      ],
+      "properties": {
+        "type": {
+          "const": "array"
+        },
+        "elementType": {
+          "$ref": "#/definitions/DataType"
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "ObjectType": {
+      "type": "object",
+      "required": [
+        "fields"
+      ],
+      "properties": {
+        "fields": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/DataType"
+          }
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "ObjectDataType": {
+      "type": "object",
+      "required": [
+        "type",
+        "fields"
+      ],
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "fields": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/DataType"
+          }
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "NullType": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "const": "null"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Mapping": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Activity": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/TaskActivity"
+        },
+        {
+          "$ref": "#/definitions/SequenceActivity"
+        },
+        {
+          "$ref": "#/definitions/DecisionActivity"
+        },
+        {
+          "$ref": "#/definitions/GroupActivity"
+        },
+        {
+          "$ref": "#/definitions/ScriptActivity"
+        },
+        {
+          "$ref": "#/definitions/HttpActivity"
+        }
+      ]
+    },
+    "TaskActivity": {
+      "type": "object",
+      "required": [
+        "type",
+        "id",
+        "name",
+        "action"
+      ],
+      "properties": {
+        "type": {
+          "const": "task"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
         },
         "name": {
           "type": "string"
@@ -54,240 +354,452 @@
         "description": {
           "type": "string"
         },
-        "dataModel": {
-          "type": "object",
-          "required": [
-            "fields"
-          ],
-          "properties": {
-            "fields": {
-              "type": "object",
-              "additionalProperties": {
-                "$ref": "#/definitions/DataType"
-              }
-            }
-          }
+        "action": {
+          "$ref": "#/definitions/TaskAction"
+        },
+        "required": {
+          "type": "boolean",
+          "default": true
+        },
+        "input": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Mapping"
+          },
+          "default": []
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Mapping"
+          },
+          "default": []
+        }
+      },
+      "additionalProperties": false
+    },
+    "SequenceActivity": {
+      "type": "object",
+      "required": [
+        "type",
+        "id",
+        "name",
+        "activities"
+      ],
+      "properties": {
+        "type": {
+          "const": "sequence"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
         },
         "activities": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Activity"
           }
+        }
+      },
+      "additionalProperties": false
+    },
+    "DecisionActivity": {
+      "type": "object",
+      "required": [
+        "type",
+        "id",
+        "expression",
+        "branches"
+      ],
+      "properties": {
+        "type": {
+          "const": "decision"
         },
-        "documents": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expression": {
+          "type": "string"
+        },
+        "branches": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/Activity"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GroupActivity": {
+      "type": "object",
+      "required": [
+        "type",
+        "id",
+        "name",
+        "activities"
+      ],
+      "properties": {
+        "type": {
+          "const": "group"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "activities": {
           "type": "array",
-          "default": [ ]
+          "items": {
+            "$ref": "#/definitions/Activity"
+          }
         }
-      }
-    }
-  },
-  "additionalProperties": false,
-  "definitions": {
-    "DataType": {
-      "oneOf": [
-        {
-          "title": "String Type",
-          "type": "object",
-          "properties": {
-            "type": {
-              "const": "string"
-            },
-            "nullable": {
-              "type": "boolean"
-            },
-            "check": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "type"
-          ],
-          "additionalProperties": false
+      },
+      "additionalProperties": false
+    },
+    "ScriptActivity": {
+      "type": "object",
+      "required": [
+        "type",
+        "id",
+        "name",
+        "script",
+        "outputKey"
+      ],
+      "properties": {
+        "type": {
+          "const": "script"
         },
-        {
-          "title": "Number Type",
-          "type": "object",
-          "properties": {
-            "type": {
-              "enum": [
-                "number",
-                "int"
-              ]
-            },
-            "digits": {
-              "type": "integer",
-              "minimum": 0
-            },
-            "decimals": {
-              "type": "integer",
-              "minimum": 0
-            },
-            "nullable": {
-              "type": "boolean"
-            },
-            "check": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "type"
-          ],
-          "additionalProperties": false
+        "id": {
+          "type": "string",
+          "minLength": 1
         },
-        {
-          "title": "Boolean Type",
-          "type": "object",
-          "properties": {
-            "type": {
-              "const": "boolean"
-            },
-            "nullable": {
-              "type": "boolean"
-            }
-          },
-          "required": [
-            "type"
-          ],
-          "additionalProperties": false
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "script": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "outputKey": {
+          "type": "string"
         }
-      ]
+      },
+      "additionalProperties": false
+    },
+    "HttpActivity": {
+      "type": "object",
+      "required": [
+        "type",
+        "id",
+        "name",
+        "urlExpression",
+        "method",
+        "bodyExpression",
+        "outputKey"
+      ],
+      "properties": {
+        "type": {
+          "const": "http"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "urlExpression": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "bodyExpression": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outputKey": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     },
     "TaskAction": {
       "oneOf": [
         {
-          "title": "Form Action",
-          "type": "object",
-          "properties": {
-            "type": {
-              "const": "form"
-            },
-            "definition": {
-              "type": "object",
-              "required": [
-                "id",
-                "description",
-                "fields"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "fields": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "additionalProperties": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "required": [
-            "type",
-            "definition"
-          ]
+          "$ref": "#/definitions/FormAction"
         },
         {
-          "title": "Instruction Action",
-          "type": "object",
-          "properties": {
-            "type": {
-              "const": "instruction"
-            },
-            "instructions": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "type",
-            "instructions"
-          ]
+          "$ref": "#/definitions/InstructionAction"
         },
         {
-          "title": "Choice Action",
-          "type": "object",
-          "properties": {
-            "type": {
-              "const": "choice"
-            },
-            "prompt": {
-              "type": "string"
-            },
-            "options": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": [
-                  "key",
-                  "label"
-                ],
-                "properties": {
-                  "key": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "required": [
-            "type",
-            "prompt",
-            "options"
-          ]
+          "$ref": "#/definitions/ChoiceAction"
         }
       ]
     },
-    "Activity": {
+    "FormAction": {
+      "type": "object",
+      "required": [
+        "type",
+        "definition"
+      ],
+      "properties": {
+        "type": {
+          "const": "form"
+        },
+        "definition": {
+          "$ref": "#/definitions/FormDefinition"
+        }
+      },
+      "additionalProperties": false
+    },
+    "InstructionAction": {
+      "type": "object",
+      "required": [
+        "type",
+        "instructions"
+      ],
+      "properties": {
+        "type": {
+          "const": "instruction"
+        },
+        "instructions": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ChoiceAction": {
+      "type": "object",
+      "required": [
+        "type",
+        "prompt",
+        "options"
+      ],
+      "properties": {
+        "type": {
+          "const": "choice"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChoiceOption"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ChoiceOption": {
+      "type": "object",
+      "required": [
+        "key",
+        "label"
+      ],
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "FormDefinition": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "fields"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FormElement"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "FormElement": {
       "oneOf": [
         {
-          "title": "Task Activity",
-          "type": "object",
-          "properties": {
-            "type": {
-              "const": "task"
-            },
-            "id": {
-              "type": "string",
-              "minLength": 1
-            },
-            "name": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
-            },
-            "action": {
-              "$ref": "#/definitions/TaskAction"
-            },
-            "output": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "default": [ ]
-            }
-          },
-          "required": [
-            "type",
-            "id",
-            "action"
-          ],
-          "additionalProperties": false
+          "$ref": "#/definitions/FormRow"
+        },
+        {
+          "$ref": "#/definitions/FormFieldWrapper"
         }
       ]
+    },
+    "FormRow": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ScalarFieldWrapper"
+      }
+    },
+    "FormFieldWrapper": {
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 1,
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/ScalarField"
+          },
+          {
+            "$ref": "#/definitions/ArrayField"
+          }
+        ]
+      }
+    },
+    "ScalarFieldWrapper": {
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/definitions/ScalarField"
+      }
+    },
+    "ScalarField": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "number",
+            "text",
+            "mask",
+            "multiline",
+            "checkbox",
+            "toggle",
+            "date",
+            "datetime"
+          ],
+          "default": "text"
+        },
+        "check": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "required": {
+          "type": "boolean",
+          "default": true
+        },
+        "width": {
+          "type": "integer",
+          "default": 12
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "errorMessage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "digits": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "decimals": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "maxLength": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mask": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "maskMessage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ArrayField": {
+      "type": "object",
+      "required": [
+        "type",
+        "fields"
+      ],
+      "properties": {
+        "type": {
+          "const": "array"
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/FormRow"
+              },
+              {
+                "$ref": "#/definitions/ScalarFieldWrapper"
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
     }
   }
 }
