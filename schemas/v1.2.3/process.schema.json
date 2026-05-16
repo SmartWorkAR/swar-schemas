@@ -585,7 +585,11 @@
                         }
                       ]
                     }
-                  }
+                  },
+                  "required": [
+                    "description",
+                    "key"
+                  ]
                 }
               }
             }
