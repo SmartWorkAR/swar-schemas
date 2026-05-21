@@ -145,10 +145,10 @@ https://smartworkar.github.io/swar-schemas/schemas/v1.2.3/process.schema.json#/p
 **pattern**: the string must match the following regular expression:&#x20;
 
 ```regexp
-^(validar(String|Fecha|InNumero|OutNumero|FechaUI)|VerificarMismoValor)\(.+\)[ ;]*$
+^(validar(String|Fecha|InNumero|OutNumero|FechaUI|SoloCaracteresUi)|VerificarMismoValor)\(.+\)[ ;]*$
 ```
 
-[try pattern](https://regexr.com/?expression=%5E\(validar\(String%7CFecha%7CInNumero%7COutNumero%7CFechaUI\)%7CVerificarMismoValor\)%5C\(.%2B%5C\)%5B%20%3B%5D*%24 "try regular expression with regexr.com")
+[try pattern](https://regexr.com/?expression=%5E\(validar\(String%7CFecha%7CInNumero%7COutNumero%7CFechaUI%7CSoloCaracteresUi\)%7CVerificarMismoValor\)%5C\(.%2B%5C\)%5B%20%3B%5D*%24 "try regular expression with regexr.com")
 
 ## placeholder
 
