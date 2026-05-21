@@ -156,6 +156,12 @@
                     "type": {
                       "type": "string"
                     },
+                    "completarConEvidenciaPrevia": {
+                      "type": "boolean"
+                    },
+                    "quiereActualizar": {
+                      "type": "boolean"
+                    },
                     "implementation": {
                       "description": "How the Instruction is implemented: form, photos, video, etc.",
                       "minProperties": 1,
@@ -194,7 +200,7 @@
                                     },
                                     "check": {
                                       "type": "string",
-                                      "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI)|VerificarMismoValor)\\(.+\\)[ ;]*$"
+                                      "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI|SoloCaracteresUi)|VerificarMismoValor)\\(.+\\)[ ;]*$"
                                     },
                                     "placeholder": {
                                       "type": "string"
@@ -390,7 +396,7 @@
                                     },
                                     "check": {
                                       "type": "string",
-                                      "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI)|VerificarMismoValor)\\(.+\\)[ ;]*$"
+                                      "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI|SoloCaracteresUi)|VerificarMismoValor)\\(.+\\)[ ;]*$"
                                     },
                                     "placeholder": {
                                       "type": "string"
@@ -514,7 +520,7 @@
                                   },
                                   "check": {
                                     "type": "string",
-                                    "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI)|VerificarMismoValor)\\(.+\\)[ ;]*$"
+                                    "pattern": "^(validar(String|Fecha|InNumero|OutNumero|FechaUI|SoloCaracteresUi)|VerificarMismoValor)\\(.+\\)[ ;]*$"
                                   },
                                   "placeholder": {
                                     "type": "string"
