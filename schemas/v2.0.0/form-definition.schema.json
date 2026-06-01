@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Form Definition",
+  "type": "object",
+  "required": ["id", "description", "fields"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the form"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of the form"
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Optional list of parameter names for the form"
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/formElement"
+      },
+      "description": "Ordered list of form elements (fields or rows)"
+    }
+  },
+  "definitions": {
+    "formElement": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/formRow"
+        },
+        {
+          "$ref": "#/definitions/fieldWrapper"
+        }
+      ]
+    },
+    "formRow": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/scalarFieldWrapper"
+      },
+      "description": "A horizontal grouping of scalar fields"
+    },
+    "fieldWrapper": {
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 1,
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/arrayField"
+          },
+          {
+            "$ref": "#/definitions/scalarField"
+          }
+        ]
+      },
+      "description": "A wrapper object where the key is the field name"
+    },
+    "scalarFieldWrapper": {
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/definitions/scalarField"
+      }
+    },
+    "commonFieldProperties": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "errorMessage": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer",
+          "default": 100
+        },
+        "required": {
+          "type": "boolean",
+          "default": true
+        },
+        "check": {
+          "type": "string",
+          "description": "Validation expression"
+        }
+      }
+    },
+    "scalarField": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/commonFieldProperties"
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "number",
+                "text",
+                "mask",
+                "multiline",
+                "checkbox",
+                "toggle",
+                "date",
+                "datetime"
+              ]
+            },
+            "digits": {
+              "type": "integer"
+            },
+            "decimals": {
+              "type": "integer"
+            },
+            "maxLength": {
+              "type": "integer"
+            },
+            "mask": {
+              "type": "string"
+            },
+            "maskMessage": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "arrayField": {
+      "type": "object",
+      "required": ["type", "fields"],
+      "properties": {
+        "type": {
+          "const": "array"
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/formRow"
+              },
+              {
+                "$ref": "#/definitions/scalarFieldWrapper"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
