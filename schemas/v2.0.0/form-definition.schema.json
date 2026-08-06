@@ -1,40 +1,49 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Form Definition",
+  "description": "Serializable definition of a SWAR form, matching FormSerializer.",
   "type": "object",
   "required": ["id", "description", "fields"],
   "properties": {
     "id": {
       "type": "string",
-      "description": "Unique identifier for the form"
+      "description": "Unique form identifier."
     },
     "description": {
       "type": "string",
-      "description": "Human-readable description of the form"
+      "description": "Human-readable form description."
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, render the description as the form title."
     },
     "parameters": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "description": "Optional list of parameter names for the form"
+      "default": [],
+      "description": "Names of runtime values available to field expressions. Omitted when empty."
     },
     "fields": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/formElement"
       },
-      "description": "Ordered list of form elements (fields or rows)"
+      "description": "Ordered top-level scalar fields, rows, and array fields."
     }
   },
+  "additionalProperties": false,
   "definitions": {
     "formElement": {
+      "description": "A top-level element: a row, scalar field, or array field.",
       "oneOf": [
         {
           "$ref": "#/definitions/formRow"
         },
         {
-          "$ref": "#/definitions/fieldWrapper"
+          "$ref": "#/definitions/topLevelFieldWrapper"
         }
       ]
     },
@@ -43,23 +52,23 @@
       "items": {
         "$ref": "#/definitions/scalarFieldWrapper"
       },
-      "description": "A horizontal grouping of scalar fields"
+      "description": "Horizontal grouping of scalar fields. Rows are encoded directly as JSON arrays."
     },
-    "fieldWrapper": {
+    "topLevelFieldWrapper": {
       "type": "object",
       "minProperties": 1,
       "maxProperties": 1,
       "additionalProperties": {
         "oneOf": [
           {
-            "$ref": "#/definitions/arrayField"
+            "$ref": "#/definitions/scalarField"
           },
           {
-            "$ref": "#/definitions/scalarField"
+            "$ref": "#/definitions/arrayField"
           }
         ]
       },
-      "description": "A wrapper object where the key is the field name"
+      "description": "Single-key object whose key is the field name."
     },
     "scalarFieldWrapper": {
       "type": "object",
@@ -67,68 +76,268 @@
       "maxProperties": 1,
       "additionalProperties": {
         "$ref": "#/definitions/scalarField"
-      }
+      },
+      "description": "Single-key scalar field object. Used in rows and array templates."
     },
-    "commonFieldProperties": {
-      "type": "object",
-      "properties": {
-        "label": {
+    "enumValues": {
+      "description": "Static options or an expression that resolves to options at runtime.",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
           "type": "string"
+        }
+      ]
+    },
+    "scalarField": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "enum": [
+            "text",
+            "mask",
+            "multiline",
+            "number",
+            "checkbox",
+            "toggle",
+            "date",
+            "datetime",
+            "select",
+            "radio",
+            "display",
+            "media"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit display label. When omitted, the label is inferred from the field name."
         },
         "errorMessage": {
-          "type": "string"
+          "type": "string",
+          "description": "Message displayed when validation fails."
         },
         "width": {
           "type": "integer",
-          "default": 100
+          "minimum": 1,
+          "description": "Positive responsive-grid weight. Defaults to 12, except radio fields, which default to 1."
         },
         "required": {
           "type": "boolean",
-          "default": true
+          "default": true,
+          "description": "Inverse of DataType.nullable. The serializer omits it when true."
         },
         "check": {
           "type": "string",
-          "description": "Validation expression"
-        }
-      }
-    },
-    "scalarField": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/commonFieldProperties"
+          "description": "Validation expression evaluated with the field value bound as value."
         },
+        "maxLength": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Text-field UI hint; validation must be expressed with check."
+        },
+        "mask": {
+          "type": "string",
+          "description": "Input mask used by a mask field."
+        },
+        "maskMessage": {
+          "type": "string",
+          "description": "Hint describing the expected masked input."
+        },
+        "digits": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Total numeric precision."
+        },
+        "decimals": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Numeric scale. Defaults to 0."
+        },
+        "values": {
+          "$ref": "#/definitions/enumValues"
+        },
+        "horizontal": {
+          "type": "boolean",
+          "default": false,
+          "description": "Lay out radio options horizontally."
+        },
+        "expression": {
+          "type": "string",
+          "description": "Expression evaluated and rendered by a display field."
+        },
+        "style": {
+          "enum": ["header", "title", "body", "label"],
+          "default": "body",
+          "description": "Display-field typography style."
+        },
+        "align": {
+          "enum": ["left", "center", "right"],
+          "default": "left",
+          "description": "Display-field horizontal alignment."
+        },
+        "mediaType": {
+          "enum": ["photo", "video", "audio"],
+          "description": "Kind of media to capture."
+        },
+        "maxDuration": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Maximum recording duration in whole seconds. Ignored for photos."
+        },
+        "quality": {
+          "enum": ["low", "default", "high"],
+          "default": "default",
+          "description": "Best-effort platform capture quality."
+        },
+        "useFrontCamera": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use the front camera for photo or video capture."
+        }
+      },
+      "additionalProperties": false,
+      "oneOf": [
         {
-          "type": "object",
-          "required": ["type"],
           "properties": {
             "type": {
-              "type": "string",
-              "enum": [
-                "number",
-                "text",
-                "mask",
-                "multiline",
-                "checkbox",
-                "toggle",
-                "date",
-                "datetime"
-              ]
-            },
-            "digits": {
-              "type": "integer"
-            },
-            "decimals": {
-              "type": "integer"
-            },
-            "maxLength": {
-              "type": "integer"
-            },
-            "mask": {
-              "type": "string"
-            },
-            "maskMessage": {
-              "type": "string"
+              "const": "text"
             }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "check", "maxLength"]
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "mask"
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "check", "mask", "maskMessage"]
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "multiline"
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "number"
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "check", "digits", "decimals"]
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "checkbox"
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "toggle"
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "date"
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "datetime"
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+          }
+        },
+        {
+          "required": ["values"],
+          "properties": {
+            "type": {
+              "const": "select"
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "values"]
+          }
+        },
+        {
+          "required": ["values"],
+          "properties": {
+            "type": {
+              "const": "radio"
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "errorMessage", "width", "required", "values", "horizontal"]
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "display"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "propertyNames": {
+            "enum": ["type", "label", "width", "required", "expression", "style", "align"]
+          }
+        },
+        {
+          "required": ["mediaType"],
+          "properties": {
+            "type": {
+              "const": "media"
+            }
+          },
+          "propertyNames": {
+            "enum": [
+              "type",
+              "label",
+              "errorMessage",
+              "width",
+              "required",
+              "check",
+              "mediaType",
+              "maxDuration",
+              "quality",
+              "useFrontCamera"
+            ]
           }
         }
       ]
@@ -151,9 +360,11 @@
                 "$ref": "#/definitions/scalarFieldWrapper"
               }
             ]
-          }
+          },
+          "description": "Repeatable template containing scalar fields or rows. Nested arrays are not supported."
         }
-      }
+      },
+      "additionalProperties": false
     }
   }
 }

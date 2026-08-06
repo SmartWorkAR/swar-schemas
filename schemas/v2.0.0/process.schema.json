@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "type": "object",
   "title": "SWAR Process Definition v2",
-  "description": "SWAR process definition aligned with modules/model Kotlin serialization",
+  "description": "SWAR process definition aligned with the current modules/swar-domain Kotlin serialization model",
   "required": [
     "reference",
     "description",
@@ -22,12 +22,13 @@
       "minLength": 1
     },
     "fullDescription": {
-      "type": "string",
-      "minLength": 1
+      "type": "string"
     },
     "executionRefName": {
       "type": "string",
-      "default": "UUID"
+      "minLength": 1,
+      "default": "UUID",
+      "description": "Name of the process execution reference. Defaults to UUID."
     },
     "executionRefMask": {
       "type": "string"
@@ -97,13 +98,16 @@
           "$ref": "#/definitions/AnyType"
         },
         {
+          "$ref": "#/definitions/EnumType"
+        },
+        {
           "$ref": "#/definitions/ArrayType"
         },
         {
-          "$ref": "#/definitions/ObjectDataType"
+          "$ref": "#/definitions/MediaDataType"
         },
         {
-          "$ref": "#/definitions/NullType"
+          "$ref": "#/definitions/ObjectDataType"
         }
       ]
     },
@@ -232,6 +236,37 @@
       },
       "additionalProperties": false
     },
+    "EnumType": {
+      "type": "object",
+      "required": [
+        "type",
+        "values"
+      ],
+      "properties": {
+        "type": {
+          "const": "enum"
+        },
+        "values": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Static values or an expression that resolves the allowed values at runtime."
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
     "ArrayType": {
       "type": "object",
       "required": [
@@ -248,6 +283,28 @@
         "nullable": {
           "type": "boolean",
           "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "MediaDataType": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "const": "media"
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": true
+        },
+        "check": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "additionalProperties": false
@@ -290,18 +347,6 @@
         "nullable": {
           "type": "boolean",
           "default": false
-        }
-      },
-      "additionalProperties": false
-    },
-    "NullType": {
-      "type": "object",
-      "required": [
-        "type"
-      ],
-      "properties": {
-        "type": {
-          "const": "null"
         }
       },
       "additionalProperties": false
@@ -576,7 +621,7 @@
           "const": "form"
         },
         "definition": {
-          "$ref": "https://smartworkar.github.io/swar-schemas/schemas/v2.0.0/form-definition.schema.json"
+          "$ref": "form-definition.schema.json"
         }
       },
       "additionalProperties": false
