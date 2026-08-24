@@ -14,19 +14,16 @@
   ],
   "properties": {
     "reference": {
-      "type": "string",
-      "minLength": 1
+      "type": "string"
     },
     "description": {
-      "type": "string",
-      "minLength": 1
+      "type": "string"
     },
     "fullDescription": {
       "type": "string"
     },
     "executionRefName": {
       "type": "string",
-      "minLength": 1,
       "default": "UUID",
       "description": "Name of the process execution reference. Defaults to UUID."
     },
@@ -55,8 +52,7 @@
       ],
       "properties": {
         "processRef": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "description": {
           "type": "string"
@@ -149,12 +145,10 @@
           "const": "number"
         },
         "digits": {
-          "type": "integer",
-          "minimum": 0
+          "type": "integer"
         },
         "decimals": {
           "type": "integer",
-          "minimum": 0,
           "default": 0
         },
         "nullable": {
@@ -352,8 +346,7 @@
       "additionalProperties": false
     },
     "Mapping": {
-      "type": "string",
-      "minLength": 1
+      "type": "string"
     },
     "Activity": {
       "oneOf": [
@@ -390,8 +383,7 @@
           "const": "task"
         },
         "id": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "name": {
           "type": "string"
@@ -436,8 +428,7 @@
           "const": "sequence"
         },
         "id": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "name": {
           "type": "string"
@@ -467,8 +458,7 @@
           "const": "decision"
         },
         "id": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "expression": {
           "type": "string"
@@ -501,8 +491,7 @@
           "const": "group"
         },
         "id": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "name": {
           "type": "string"
@@ -533,8 +522,7 @@
           "const": "script"
         },
         "id": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "name": {
           "type": "string"
@@ -570,8 +558,7 @@
           "const": "http"
         },
         "id": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "name": {
           "type": "string"

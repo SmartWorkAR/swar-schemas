@@ -18,14 +18,6 @@
       "default": false,
       "description": "When true, render the description as the form title."
     },
-    "parameters": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "default": [],
-      "description": "Names of runtime values available to field expressions. Omitted when empty."
-    },
     "fields": {
       "type": "array",
       "items": {
@@ -95,7 +87,6 @@
     },
     "scalarField": {
       "type": "object",
-      "required": ["type"],
       "properties": {
         "type": {
           "enum": [
@@ -111,21 +102,28 @@
             "radio",
             "display",
             "media"
-          ]
+          ],
+          "default": "text",
+          "description": "Field kind. When omitted, FormSerializer deserializes the field as text."
         },
         "label": {
           "type": "string",
-          "minLength": 1,
           "description": "Explicit display label. When omitted, the label is inferred from the field name."
         },
         "errorMessage": {
           "type": "string",
           "description": "Message displayed when validation fails."
         },
+        "hidden": {
+          "oneOf": [
+            { "type": "boolean" },
+            { "type": "string" }
+          ],
+          "description": "Visibility expression. A literal boolean is the common always-hidden/always-visible case; a string is evaluated as an expression against the same scope as check, re-evaluated whenever sibling field values change. Omitted means always visible. A hidden field takes no layout space and is exempt from validation while hidden."
+        },
         "width": {
           "type": "integer",
-          "minimum": 1,
-          "description": "Positive responsive-grid weight. Defaults to 12, except radio fields, which default to 1."
+          "description": "Responsive-grid weight. Defaults to 12, except radio fields, which default to 1."
         },
         "required": {
           "type": "boolean",
@@ -138,7 +136,6 @@
         },
         "maxLength": {
           "type": "integer",
-          "minimum": 0,
           "description": "Text-field UI hint; validation must be expressed with check."
         },
         "mask": {
@@ -151,12 +148,10 @@
         },
         "digits": {
           "type": "integer",
-          "minimum": 1,
           "description": "Total numeric precision."
         },
         "decimals": {
           "type": "integer",
-          "minimum": 0,
           "description": "Numeric scale. Defaults to 0."
         },
         "values": {
@@ -187,7 +182,6 @@
         },
         "maxDuration": {
           "type": "integer",
-          "minimum": 0,
           "description": "Maximum recording duration in whole seconds. Ignored for photos."
         },
         "quality": {
@@ -210,102 +204,110 @@
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "check", "maxLength"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "check", "maxLength"]
           }
         },
         {
+          "required": ["type"],
           "properties": {
             "type": {
               "const": "mask"
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "check", "mask", "maskMessage"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "check", "mask", "maskMessage"]
           }
         },
         {
+          "required": ["type"],
           "properties": {
             "type": {
               "const": "multiline"
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "check"]
           }
         },
         {
+          "required": ["type"],
           "properties": {
             "type": {
               "const": "number"
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "check", "digits", "decimals"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "check", "digits", "decimals"]
           }
         },
         {
+          "required": ["type"],
           "properties": {
             "type": {
               "const": "checkbox"
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "check"]
           }
         },
         {
+          "required": ["type"],
           "properties": {
             "type": {
               "const": "toggle"
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "check"]
           }
         },
         {
+          "required": ["type"],
           "properties": {
             "type": {
               "const": "date"
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "check"]
           }
         },
         {
+          "required": ["type"],
           "properties": {
             "type": {
               "const": "datetime"
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "check"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "check"]
           }
         },
         {
-          "required": ["values"],
+          "required": ["type", "values"],
           "properties": {
             "type": {
               "const": "select"
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "values"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "values"]
           }
         },
         {
-          "required": ["values"],
+          "required": ["type", "values"],
           "properties": {
             "type": {
               "const": "radio"
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "errorMessage", "width", "required", "values", "horizontal"]
+            "enum": ["type", "label", "errorMessage", "hidden", "width", "required", "values", "horizontal"]
           }
         },
         {
+          "required": ["type"],
           "properties": {
             "type": {
               "const": "display"
@@ -315,11 +317,11 @@
             }
           },
           "propertyNames": {
-            "enum": ["type", "label", "width", "required", "expression", "style", "align"]
+            "enum": ["type", "label", "hidden", "width", "required", "expression", "style", "align"]
           }
         },
         {
-          "required": ["mediaType"],
+          "required": ["type", "mediaType"],
           "properties": {
             "type": {
               "const": "media"
@@ -329,7 +331,7 @@
             "enum": [
               "type",
               "label",
-              "errorMessage",
+              "errorMessage", "hidden",
               "width",
               "required",
               "check",
@@ -348,6 +350,15 @@
       "properties": {
         "type": {
           "const": "array"
+        },
+        "fixed": {
+          "type": "boolean",
+          "default": false,
+          "description": "When true, the row count is set once from the data the form is initialized with and cannot be changed by the user — no add/remove controls are rendered."
+        },
+        "label": {
+          "type": "string",
+          "description": "Explicit display label for the array's section header. When omitted, the label is inferred from the field name."
         },
         "fields": {
           "type": "array",
